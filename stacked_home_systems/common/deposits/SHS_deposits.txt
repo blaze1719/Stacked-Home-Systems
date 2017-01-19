@@ -1,0 +1,729 @@
+#####################################################
+## EXTRA MINERAL DEPOSITS FOR CUSTOM SOLAR SYSTEMS ##
+#####################################################
+
+d_minerals1_deposit = {
+	resources = { minerals = 1 }
+	station = shipclass_mining_station
+}
+
+d_minerals2_deposit = {
+	resources = { minerals = 2 }
+	station = shipclass_mining_station
+}
+
+d_minerals3_deposit = {
+	resources = { minerals = 3 }
+	station = shipclass_mining_station
+}
+
+d_minerals4_deposit = {
+	resources = { minerals = 4 }
+	station = shipclass_mining_station
+}
+
+d_minerals5_deposit = {
+	resources = { minerals = 5 }
+	station = shipclass_mining_station
+}
+
+d_minerals6_deposit = {
+	resources = { minerals = 6 }
+	station = shipclass_mining_station
+}
+
+d_minerals7_deposit = {
+	resources = { minerals = 7 }
+	station = shipclass_mining_station
+}
+
+d_minerals8_deposit = {
+	resources = { minerals = 8 }
+	station = shipclass_mining_station
+}
+
+d_minerals9_deposit = {
+	resources = { minerals = 9 }
+	station = shipclass_mining_station
+}
+
+d_minerals10_deposit = {
+	resources = { minerals = 10 }
+	station = shipclass_mining_station
+}
+
+####################################################
+## EXTRA ENERGY DEPOSITS FOR CUSTOM SOLAR SYSTEMS ##
+####################################################
+
+d_energy1_deposit = {
+	resources = { energy = 1 }
+	station = shipclass_mining_station
+}
+
+d_energy2_deposit = {
+	resources = { energy = 2 }
+	station = shipclass_mining_station
+}
+
+d_energy3_deposit = {
+	resources = { energy = 3 }
+	station = shipclass_mining_station
+}
+
+d_energy4_deposit = {
+	resources = { energy = 4 }
+	station = shipclass_mining_station
+}
+
+d_energy5_deposit = {
+	resources = { energy = 5 }
+	station = shipclass_mining_station
+}
+
+d_energy6_deposit = {
+	resources = { energy = 6 }
+	station = shipclass_mining_station
+}
+
+d_energy7_deposit = {
+	resources = { energy = 7 }
+	station = shipclass_mining_station
+}
+
+d_energy8_deposit = {
+	resources = { energy = 8 }
+	station = shipclass_mining_station
+}
+
+d_energy9_deposit = {
+	resources = { energy = 9 }
+	station = shipclass_mining_station
+}
+
+d_energy10_deposit = {
+	resources = { energy = 10 }
+	station = shipclass_mining_station
+}
+
+########################################################
+## EXTRA STRATEGIC RESOURCES FOR CUSTOM SOLAR SYSTEMS ##
+########################################################
+
+d1_terraforming_gases_deposit = {
+	resources = {
+		sr_terraform_gases = 1
+	}
+	station = shipclass_mining_station
+}
+
+d1_terraforming_liquids_deposit = {
+	resources = {
+		sr_terraform_liquids = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_terraforming_gases_deposit = {
+	resources = {
+		sr_terraform_gases = 1
+	}
+	station = shipclass_research_station
+}
+
+d2_terraforming_liquids_deposit = {
+	resources = {
+		sr_terraform_liquids = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_garanthium_deposit = {
+	resources = {
+		sr_garanthium = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_garanthium_deposit = {
+	resources = {
+		sr_garanthium = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_lythuric_deposit = {
+	resources = {
+		sr_lythuric = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_lythuric_deposit = {
+	resources = {
+		sr_lythuric = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_teldar_deposit = {
+	resources = {
+		sr_teldar = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_teldar_deposit = {
+	resources = {
+		sr_teldar = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_orillium_deposit = {
+	resources = {
+		sr_orillium = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_orillium_deposit = {
+	resources = {
+		sr_orillium = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_pitharan_deposit = {
+	resources = {
+		sr_pitharan = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_pitharan_deposit = {
+	resources = {
+		sr_pitharan = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_engos_deposit = {
+	resources = {
+		sr_engos = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_engos_deposit = {
+	resources = {
+		sr_engos = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_neutronium_deposit = {
+	resources = {
+		sr_neutronium = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_neutronium_deposit = {
+	resources = {
+		sr_neutronium = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_living_metal_deposit = {
+	resources = {
+		sr_living_metal = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_living_metal_deposit = {
+	resources = {
+		sr_living_metal = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_zro_deposit = {
+	resources = {
+		sr_zro = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_zro_deposit = {
+	resources = {
+		sr_zro = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_dark_matter_deposit = {
+	resources = {
+		sr_dark_matter = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_dark_matter_deposit = {
+	resources = {
+		sr_dark_matter = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_satramene_deposit = {
+	resources = {
+		sr_satramene = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_satramene_deposit = {
+	resources = {
+		sr_satramene = 1
+	}
+	station = shipclass_research_station
+}
+
+######################################################
+## EXTRA SCIENCE RESOURCES FOR CUSTOM SOLAR SYSTEMS ##
+######################################################
+
+#############
+## SOCIETY ##
+#############
+
+d1_society1_deposit = {
+	resources = {
+		society_research = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_society2_deposit = {
+	resources = {
+		society_research = 2
+	}
+	station = shipclass_research_station
+}
+
+d1_society3_deposit = {
+	resources = {
+		society_research = 3
+	}
+	station = shipclass_research_station
+}
+
+d1_society4_deposit = {
+	resources = {
+		society_research = 4
+	}
+	station = shipclass_research_station
+}
+
+d1_society5_deposit = {
+	resources = {
+		society_research = 5
+	}
+	station = shipclass_research_station
+}
+
+d1_society6_deposit = {
+	resources = {
+		society_research = 6
+	}
+	station = shipclass_research_station
+}
+
+d1_society7_deposit = {
+	resources = {
+		society_research = 7
+	}
+	station = shipclass_research_station
+}
+
+d1_society8_deposit = {
+	resources = {
+		society_research = 8
+	}
+	station = shipclass_research_station
+}
+
+d1_society9_deposit = {
+	resources = {
+		society_research = 9
+	}
+	station = shipclass_research_station
+}
+
+d1_society10_deposit = {
+	resources = {
+		society_research = 10
+	}
+	station = shipclass_research_station
+}
+
+d2_society1_deposit = {
+	resources = {
+		society_research = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_society2_deposit = {
+	resources = {
+		society_research = 2
+	}
+	station = shipclass_mining_station
+}
+
+d2_society3_deposit = {
+	resources = {
+		society_research = 3
+	}
+	station = shipclass_mining_station
+}
+
+d2_society4_deposit = {
+	resources = {
+		society_research = 4
+	}
+	station = shipclass_mining_station
+}
+
+d2_society5_deposit = {
+	resources = {
+		society_research = 5
+	}
+	station = shipclass_mining_station
+}
+
+d2_society6_deposit = {
+	resources = {
+		society_research = 6
+	}
+	station = shipclass_mining_station
+}
+
+d2_society7_deposit = {
+	resources = {
+		society_research = 7
+	}
+	station = shipclass_mining_station
+}
+
+d2_society8_deposit = {
+	resources = {
+		society_research = 8
+	}
+	station = shipclass_mining_station
+}
+
+d2_society9_deposit = {
+	resources = {
+		society_research = 9
+	}
+	station = shipclass_mining_station
+}
+
+d2_society10_deposit = {
+	resources = {
+		society_research = 10
+	}
+	station = shipclass_mining_station
+}
+
+#################
+## ENGINEERING ##
+#################
+
+d1_engineering1_deposit = {
+	resources = {
+		engineering_research = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering2_deposit = {
+	resources = {
+		engineering_research = 2
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering3_deposit = {
+	resources = {
+		engineering_research = 3
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering4_deposit = {
+	resources = {
+		engineering_research = 4
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering5_deposit = {
+	resources = {
+		engineering_research = 5
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering6_deposit = {
+	resources = {
+		engineering_research = 6
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering7_deposit = {
+	resources = {
+		engineering_research = 7
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering8_deposit = {
+	resources = {
+		engineering_research = 8
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering9_deposit = {
+	resources = {
+		engineering_research = 9
+	}
+	station = shipclass_research_station
+}
+
+d1_engineering10_deposit = {
+	resources = {
+		engineering_research = 10
+	}
+	station = shipclass_research_station
+}
+
+d2_engineering1_deposit = {
+	resources = {
+		engineering_research = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering2_deposit = {
+	resources = {
+		engineering_research = 2
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering3_deposit = {
+	resources = {
+		engineering_research = 3
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering4_deposit = {
+	resources = {
+		engineering_research = 4
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering5_deposit = {
+	resources = {
+		engineering_research = 5
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering6_deposit = {
+	resources = {
+		engineering_research = 6
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering7_deposit = {
+	resources = {
+		engineering_research = 7
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering8_deposit = {
+	resources = {
+		engineering_research = 8
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering9_deposit = {
+	resources = {
+		engineering_research = 9
+	}
+	station = shipclass_mining_station
+}
+
+d2_engineering10_deposit = {
+	resources = {
+		engineering_research = 10
+	}
+	station = shipclass_mining_station
+}
+
+#############
+## PHYSICS ##
+#############
+
+d1_physics1_deposit = {
+	resources = {
+		physics_research = 1
+	}
+	station = shipclass_research_station
+}
+
+d1_physics2_deposit = {
+	resources = {
+		physics_research = 2
+	}
+	station = shipclass_research_station
+}
+
+d1_physics3_deposit = {
+	resources = {
+		physics_research = 3
+	}
+	station = shipclass_research_station
+}
+
+d1_physics4_deposit = {
+	resources = {
+		physics_research = 4
+	}
+	station = shipclass_research_station
+}
+
+d1_physics5_deposit = {
+	resources = {
+		physics_research = 5
+	}
+	station = shipclass_research_station
+}
+
+d1_physics6_deposit = {
+	resources = {
+		physics_research = 6
+	}
+	station = shipclass_research_station
+}
+
+d1_physics7_deposit = {
+	resources = {
+		physics_research = 7
+	}
+	station = shipclass_research_station
+}
+
+d1_physics8_deposit = {
+	resources = {
+		physics_research = 8
+	}
+	station = shipclass_research_station
+}
+
+d1_physics9_deposit = {
+	resources = {
+		physics_research = 9
+	}
+	station = shipclass_research_station
+}
+
+d1_physics10_deposit = {
+	resources = {
+		physics_research = 10
+	}
+	station = shipclass_research_station
+}
+
+d2_physics1_deposit = {
+	resources = {
+		physics_research = 1
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics2_deposit = {
+	resources = {
+		physics_research = 2
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics3_deposit = {
+	resources = {
+		physics_research = 3
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics4_deposit = {
+	resources = {
+		physics_research = 4
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics5_deposit = {
+	resources = {
+		physics_research = 5
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics6_deposit = {
+	resources = {
+		physics_research = 6
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics7_deposit = {
+	resources = {
+		physics_research = 7
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics8_deposit = {
+	resources = {
+		physics_research = 8
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics9_deposit = {
+	resources = {
+		physics_research = 9
+	}
+	station = shipclass_mining_station
+}
+
+d2_physics10_deposit = {
+	resources = {
+		physics_research = 10
+	}
+	station = shipclass_mining_station
+}

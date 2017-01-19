@@ -1,0 +1,4210 @@
+
+@distance = 20
+@base_moon_distance = 5
+
+###########################
+### NEIGHBORING SYSTEMS ###
+###########################
+
+############################################################################################################################
+# Different Planet Class systems ###########################################################################################
+############################################################################################################################
+
+yggdrasil_system = {
+	class = "sc_b_1"
+	asteroids_distance = 100
+	name = "Yggdrasil"
+	
+	planet = {
+		name = "Odin"
+		class = "pc_b_star"
+		orbit_distance = 30
+		size = 50
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d2_physics5_deposit
+				add_deposit = d2_engineering5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Frigga"
+		class = "pc_k_star"
+		orbit_angle = 180
+		orbit_distance = 0
+		size = 30
+		has_ring = no
+		anomaly = none
+					
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_physics5_deposit
+				add_deposit = d2_engineering5_deposit
+			}	
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	
+	change_orbit = 70
+	
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = "pc_asteroid"
+		orbit_angle = { min = 35 max = 90 }
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy2_deposit
+				add_deposit = d2_physics2_deposit
+				add_deposit = d2_engineering2_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Yggdrasil"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 40
+		size = 30
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d1_lythuric_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		moon = {
+			name = "Valhalla"
+			class = "pc_gaia"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 20
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Baldr"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 50
+		size = 30
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+			}
+		}
+		
+		moon = {
+			name = "Álfheimr"
+			class = "pc_arid"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 20
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Niðavellir"
+			class = "pc_savannah"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Muspelheim"
+			class = "pc_desert"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Thor"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 50
+		size = 30
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+			}
+		}
+		
+		moon = {
+			name = "Asgard"
+			class = "pc_tropical"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 20
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Midgard"
+			class = "pc_continental"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Vanaheimr"
+			class = "pc_ocean"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Víðarr"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 50
+		size = 30
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+			}
+		}
+		
+		moon = {
+			name = "Jötunheimr"
+			class = "pc_alpine"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 20
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Helheimr"
+			class = "pc_tundra"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Niflheim"
+			class = "pc_arctic"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 20 max = 25 }
+			tile_blockers = none
+			modifiers = none
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Váli"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 50
+		size = 30
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+			}
+		}
+		
+		moon = {
+			name = "Heimdallr"
+			class = "pc_frozen"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 16
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d_minerals5_deposit
+					add_deposit = d2_engineering5_deposit
+					add_deposit = d2_physics5_deposit
+					add_deposit = d2_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Loki"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 50
+		size = 30
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_minerals10_deposit
+			}
+		}
+	
+		moon = {
+			name = "Meili"
+			class = "pc_frozen"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 16
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d2_physics5_deposit
+					add_deposit = d2_engineering5_deposit
+				}	
+			}
+
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Nepr"
+			class = "pc_frozen"
+			orbit_distance = 5
+			orbit_angle = { min = 15 max = 345 }
+			size = { min = 5 max = 10 }
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+					add_deposit = d2_physics5_deposit
+					add_deposit = d2_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Áli"
+			class = "pc_frozen"
+			orbit_distance = 5
+			orbit_angle = { min = 15 max = 345 }
+			size = { min = 5 max = 10 }
+			anomaly = none
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+					add_deposit = d2_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 30 }
+		initializer = "ring_world_system_1"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 30 }	
+		initializer = "neighbor_normal_1_colony"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 30 }
+		initializer = "mjolnir_system"
+	}
+}
+
+################################################################################################################################################################
+# Ragnarök system ##############################################################################################################################################
+################################################################################################################################################################
+
+ragnarok_system_1 = {
+	class = "sc_black_hole_1"
+	asteroids_distance = 70
+	name = "Ragnarok"
+	
+	planet = {
+		name = "Ragnarok"
+		class = "pc_black_hole"
+		orbit_distance = 0
+		size = { min = 20 max = 30 }
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d2_physics6_deposit
+				add_deposit = d1_dark_matter_deposit 
+			}
+		}
+	
+	
+		moon = {
+			name = "Fenrir"
+			class = "pc_m_star"
+			orbit_distance = 30
+			orbit_angle = { min = 90 max = 270 }
+			size = 20
+			anomaly = none
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy6_deposit
+					add_deposit = d2_physics4_deposit
+					add_deposit = d1_satramene_deposit
+				}	
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Jörmungandr"
+		class = "pc_barren"
+		entity = "barren_planet_01_destroyed_entity"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 55
+		size = 20
+		anomaly = none
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_living_metal_deposit
+				add_deposit = d1_living_metal_deposit
+				add_deposit = d_minerals10_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 15
+	
+	planet = {
+		class = "pc_asteroid"
+		size = { min = 2 max = 5 }
+		orbit_angle = { min = 20 max = 72 }
+		orbit_distance = 0
+		anomaly = none
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_teldar_deposit
+				add_deposit = d_minerals3_deposit
+				add_deposit = d_energy3_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Njörðr"
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		class = "pc_barren"
+		modifiers = none
+		entity = "barren_planet_01_destroyed_entity"
+		anomaly = none
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_living_metal_deposit
+				add_deposit = d1_living_metal_deposit
+				add_deposit = d_minerals10_deposit
+				add_deposit = d2_engineering5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Valkyrie"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 30
+		size = { min = 20 max = 25 }
+		has_ring = yes
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d2_engineering5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		moon = {
+			name = "Fólkvangr"
+			class = pc_gaia
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			tile_blockers = none
+			modifiers = none
+			size = { min = 20 max = 25 }
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Gunnr"
+			size = 9
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 5
+			class = "pc_barren"
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_orillium_deposit
+					add_deposit = d2_physics5_deposit
+					add_deposit = d2_society5_deposit
+					add_deposit = d2_engineering5_deposit
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "rl_un1"
+		count = { min = 2 max = 5 }
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 15
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		moon = {
+			class = "rl_un1"
+			orbit_angle = { min = 15 max = 345 }
+			count = { min = 1 max = 2 }
+			orbit_distance = 7
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy3_deposit
+					add_deposit = d2_society2_deposit
+					add_deposit = d2_engineering2_deposit
+					add_deposit = d2_physics2_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 20 }	
+		initializer = "neighbor_normal_3_colony"
+	}
+}
+
+#######################################################################################################################################################
+# Neighbor Star Normal Colony 1 #######################################################################################################################
+#######################################################################################################################################################
+
+neighbor_normal_1_colony = {
+	class = "sc_f_1"
+	asteroids_distance = 35
+
+	planet = {
+		count = 1
+		class = "pc_f_star"
+		orbit_distance = 0
+		size = { min = 20 max = 30 }
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {	
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy3_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = "pc_asteroid"
+		orbit_angle = { min = 35 max = 90 }
+		size = { min = 3 max = 5 }
+		orbit_distance = 0
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		orbit_distance = 20
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 25
+		class = ideal_planet_class
+		tile_blockers = none
+		modifiers = none
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 18 max = 25 }
+		anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				set_planet_flag = prescripted_ideal
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+		moon = { 
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 7
+			class = "rl_un1"
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		orbit_distance = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {			
+			count = { min = 0 max = 1 }
+			orbit_distance = 5
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = @distance }	
+		initializer = "neighbor_normal_2_colony"
+	}
+}
+
+##################################################################################################################################
+# Neighbor Star Normal Colony 2 ##################################################################################################
+##################################################################################################################################
+
+neighbor_normal_2_colony = {
+	class = "rl_standard_stars"
+	asteroids_distance = 70
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 45
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 1 max = 3 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 15 max = 110 }
+	}
+	
+	planet = {
+		count = 1
+		class = ideal_planet_class
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 25
+		tile_blockers = none
+		modifiers = none
+		size = { min = 19 max = 25 }
+		anomaly = none
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+		
+		init_effect = {
+			set_planet_flag = prescripted_ideal
+		}
+		
+		init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 5
+			class = "rl_all_1"
+			size = 16
+			anomaly = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 2 max = 5 }
+		orbit_distance = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {		
+			count = { min = 0 max = 1 }
+			orbit_distance = 5
+		}
+	}
+}
+
+###################################################################################################################################
+# Neighbor Star Third Colony ######################################################################################################
+###################################################################################################################################
+
+neighbor_normal_3_colony = {
+	class = "rl_custom_standard_stars"
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = 2
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 20
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 25
+		class = ideal_planet_class
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 18 max = 25 }
+		anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				set_planet_flag = prescripted_ideal
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 5
+					}
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = energy
+							amount = 3
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = food
+							amount = 3
+							replace = yes
+						}
+					}	
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						add_resource = {
+							resource = minerals
+							amount = 3
+							replace = yes
+						}
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = random
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = random
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = random
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = random
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+		
+		moon = { 
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 7
+			class = "rl_un1"
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		count = 2
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 20
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 20
+	}
+}
+
+##############################################################################################################################
+## Ring World System #########################################################################################################
+##############################################################################################################################
+
+ring_world_system_1 = {
+	asteroids_distance = 150
+	name = "The Gift"
+
+	class = "sc_g_1"
+	
+	planet = {
+		name = "The Gift"
+		class = "pc_g_star"
+		orbit_distance = 0
+		size = 30
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab A"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 }
+				add_resource = {
+					resource = food
+					amount = 10
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 10
+				}
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = minerals
+						amount = 5
+						replace = yes
+					}						
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_resource = {
+					resource = physics_research
+					amount = 10
+					replace = yes
+				}
+				add_resource = {
+					resource = society_research
+					amount = 10
+				}
+				add_resource = {
+					resource = engineering_research
+					amount = 10
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = engineering_research
+					amount = 5
+					replace = yes
+				}		
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}				
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = physics_research
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_alien_pets
+					amount = 1
+				}
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = food
+					amount = 5
+					replace = yes
+				}							
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = minerals
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}	
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_resource = {
+					resource = minerals 
+					amount = 3
+					replace = yes
+				}
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech B"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam C"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab D"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 }
+				add_resource = {
+					resource = food
+					amount = 10
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 10
+				}
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = minerals
+						amount = 5
+						replace = yes
+					}						
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_resource = {
+					resource = physics_research
+					amount = 10
+					replace = yes
+				}
+				add_resource = {
+					resource = society_research
+					amount = 10
+				}
+				add_resource = {
+					resource = engineering_research
+					amount = 10
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = engineering_research
+					amount = 5
+					replace = yes
+				}		
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}				
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = physics_research
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_alien_pets
+					amount = 1
+				}
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = food
+					amount = 5
+					replace = yes
+				}							
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = minerals
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}	
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_resource = {
+					resource = minerals 
+					amount = 3
+					replace = yes
+				}
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech E"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam F"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab G"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 }
+				add_resource = {
+					resource = food
+					amount = 10
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 10
+				}
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = minerals
+						amount = 5
+						replace = yes
+					}						
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_resource = {
+					resource = physics_research
+					amount = 10
+					replace = yes
+				}
+				add_resource = {
+					resource = society_research
+					amount = 10
+				}
+				add_resource = {
+					resource = engineering_research
+					amount = 10
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = engineering_research
+					amount = 5
+					replace = yes
+				}		
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}				
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = physics_research
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_alien_pets
+					amount = 1
+				}
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = food
+					amount = 5
+					replace = yes
+				}							
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = minerals
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}	
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_resource = {
+					resource = minerals 
+					amount = 3
+					replace = yes
+				}
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech H"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam I"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab J"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 }
+				add_resource = {
+					resource = food
+					amount = 10
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 10
+				}
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_recent_crater"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_resource = {
+						resource = minerals
+						amount = 5
+						replace = yes
+					}						
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_resource = {
+					resource = physics_research
+					amount = 10
+					replace = yes
+				}
+				add_resource = {
+					resource = society_research
+					amount = 10
+				}
+				add_resource = {
+					resource = engineering_research
+					amount = 10
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = engineering_research
+					amount = 5
+					replace = yes
+				}		
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}				
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = physics_research
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_crashed_satellites"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_alien_pets
+					amount = 1
+				}
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = food
+					amount = 5
+					replace = yes
+				}							
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = minerals
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = energy
+					amount = 5
+					replace = yes
+				}	
+				add_resource = {
+					resource = sr_betharian
+					amount = 1
+				}
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_resource = {
+					resource = minerals 
+					amount = 3
+					replace = yes
+				}
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech K"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam L"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 105
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 1 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+		}
+	}
+}
+
+#######################################################################################################################################
+## Mjölnir System #####################################################################################################################
+#######################################################################################################################################
+
+mjolnir_system = {
+	asteroids_distance = 200
+	name = "Mjölnir"
+	
+	class = "sc_neutron_star_1"
+	
+	planet = {
+		name = "Mjölnir"
+		class = "pc_neutron_star"
+		orbit_distance = 0
+		size = 30
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d1_neutronium_deposit
+			}
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		name = "Módi"
+		class = "pc_molten"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 0
+		size = { min = 10 max = 20 }
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_minerals3_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Magni"
+		class = "pc_molten"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 20
+		size = { min = 10 max = 20 }
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_minerals3_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Megingjörð"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 30
+		size = { min = 20 max = 30 }
+		anomaly = none
+		modifiers = none
+		has_ring = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_terraforming_gases_deposit
+				add_deposit = d_energy3_deposit
+			}
+		}
+		
+		moon = {
+			name = "Tanngrisnir"
+			class = "pc_barren"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = { min = 8 max = 11 }
+			anomaly = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals3_deposit
+					add_deposit = d2_engineering3_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			name = "Tanngnjóstr"
+			class = "pc_barren"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 7
+			size = { min = 8 max = 11 }
+			anomaly = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals3_deposit
+					add_deposit = d2_physics3_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Sif"
+		class = ideal_planet_class
+		orbit_distance = 35
+		size = { min = 20 max = 25 }
+		anomaly = none
+		orbit_angle = { min = 90 max = 270 }
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			set_planet_flag = prescripted_ideal
+		}
+			
+		init_effect = {
+			prevent_anomaly = yes
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				add_resource = {
+					resource = food
+					amount = 5
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 5
+				}
+					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					add_resource = {
+						resource = energy
+						amount = 3
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					add_resource = {
+						resource = energy
+						amount = 3
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					add_resource = {
+						resource = food
+						amount = 3
+						replace = yes
+					}
+				}	
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					add_resource = {
+						resource = minerals
+						amount = 3
+						replace = yes
+					}
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_alien_pets
+					amount = 1
+				}
+			}
+		
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_resource = {
+				resource = physics_research
+					amount = 5
+					replace = yes
+				}
+			}
+		
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_recent_crater"
+				add_resource = {
+					resource = engineering_research
+					amount = 5
+					replace = yes
+				}
+			}
+		}
+		
+		moon = {
+			name = "Thrud"
+			class = "pc_barren"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = { min = 8 max = 11 }
+			anomaly = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Módi"
+		class = "pc_frozen"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 25
+		size = { min = 15 max = 19 }
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy3_deposit
+				add_deposit = d2_society3_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Járngreipr"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 30
+		size = { min = 25 max = 29 }
+		anomaly = none
+		modifiers = none
+		has_ring = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d_minerals5_deposit
+			}
+		}
+		
+		moon = {
+			name = "Járnsaxa"
+			class = "pc_toxic"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = { min = 8 max = 11 }
+			anomaly = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d2_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		class = "pc_asteroid"
+		count = 4
+		orbit_angle = { min = 30 max = 72 }
+		orbit_distance = 0
+		size = { min = 2 max = 5 }
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		name = "Ymir"
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 30
+		size = { min = 20 max = 30 }
+		has_ring = yes
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy2_deposit
+				add_deposit = d2_engineering3_deposit
+			}
+		}
+		
+		moon = {
+			name = "Gríðarvölr"
+			class = "pc_barren"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = { min = 8 max = 11 }
+			has_ring = no
+			anomaly = none
+			modifiers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d2_engineering3_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}

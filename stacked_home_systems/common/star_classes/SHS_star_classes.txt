@@ -1,0 +1,109 @@
+sc_black_hole_1 = {
+	class = black_hole
+	icon_scale = 2.0
+	planet = pc_black_hole
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_b_1 = {
+	class = b_star
+	planet = pc_b_star
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_a_1 = {
+	class = a_star
+	planet = pc_a_star
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_f_1 = {
+	class = f_star
+	planet = pc_f_star
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_g_1 = {
+	class = g_star
+	planet = pc_g_star
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_k_1 = {
+	class = k_star
+	planet = pc_k_star
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_m_1 = {
+	class = m_star
+	planet = pc_m_star
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_neutron_star_1 = {
+	class = neutron_star
+	planet = pc_neutron_star
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+sc_pulsar_1 = {
+	class = pulsar
+	planet = pc_pulsar
+	spawn_odds = 0
+	num_planets = { min = 1 max = 50 }
+}
+
+random_list = {
+	name = "rl_custom_special_stars"
+	stars = {
+		"sc_black_hole_1"
+		"sc_neutron_star_1"
+		"sc_pulsar_1"
+	}
+}
+
+random_list = {
+	name = "rl_custom_standard_stars"
+	stars = {
+		"sc_b_1"
+		"sc_a_1"
+		"sc_f_1"
+		"sc_g_1"
+		"sc_k_1"
+		"sc_m_1"
+	}
+}
+
+random_list = {
+	name = "rl_custom_dwarf_stars"
+	stars = {
+		"sc_f_1"
+		"sc_g_1"
+		"sc_k_1"
+		"sc_m_1"
+	}
+}
+
+random_list = {
+	name = "rl_custom_all_stars"
+	stars = {
+		"sc_b_1"
+		"sc_a_1"
+		"sc_f_1"
+		"sc_g_1"
+		"sc_k_1"
+		"sc_m_1"
+		"sc_black_hole_1"
+		"sc_neutron_star_1"
+		"sc_pulsar_1"
+	}
+}

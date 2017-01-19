@@ -1,0 +1,1671 @@
+
+@distance = 20
+@base_moon_distance = 5
+
+###########################################################################################################################################################
+##### Starting Systems ####################################################################################################################################
+###########################################################################################################################################################
+
+###########################################################################################################################################################
+##### Dual Star Starting System ###########################################################################################################################
+###########################################################################################################################################################
+
+dualstar_system_initializer = {
+	name = "Tatooine"
+	class = "sc_g_1"
+	asteroids_distance = 121
+	usage_odds = 0
+	max_instances = 1
+	
+	usage = custom_empire
+	
+	planet = {
+		class = "pc_g_star"
+		orbit_distance = 30
+		size = 30
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d_minerals10_deposit
+				add_deposit = d2_physics5_deposit
+				add_deposit = d1_engos_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+		
+	planet = {
+		orbit_angle = 180
+		orbit_distance = 0
+		size = 30
+		class = "pc_g_star"
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d_minerals10_deposit
+				add_deposit = d2_physics5_deposit
+				add_deposit = d1_engos_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+		size = 15
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_garanthium_deposit
+				add_deposit = d_minerals10_deposit
+			}
+		}
+		
+		moon = {
+			count = { min = 1 max = 2 }
+			orbit_distance = 5
+			orbit_angle = { min = 15 max = 345 }
+			class = "pc_molten"
+			size = { min = 5 max = 8 }
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 18
+		orbit_angle = { min = 90 max = 270 }
+		size = 15
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_garanthium_deposit
+				add_deposit = d_minerals10_deposit
+			}
+		}
+		
+		moon = {
+			count = { min = 1 max = 2 }
+			orbit_distance = 5
+			orbit_angle = { min = 15 max = 345 }
+			class = "pc_molten"
+			size = { min = 5 max = 8 }
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_toxic"
+		orbit_distance = 18
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_pitharan_deposit
+				add_deposit = d1_engineering5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_toxic"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 5
+			has_ring = no
+			anomaly = none
+			size = { min = 5 max = 8 }
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d2_pitharan_deposit
+					add_deposit = d1_engineering5_deposit
+					add_deposit = d1_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	change_orbit = 15
+	
+	planet = {
+		count = 4
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+		size = 4
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = { min = 45 max = 315 }
+		size = 25
+		has_ring = yes
+		entity = "gas_giant_jupiter_entity"
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d1_terraforming_gases_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_barren"
+			orbit_distance = 15
+			orbit_angle = { min = 15 max = 345 }
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			entity = "barren_planet_01_destroyed_entity"
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d2_neutronium_deposit
+					add_deposit = d1_physics5_deposit
+					add_deposit = d1_engineering5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+
+			home_planet = yes
+			starting_planet = yes
+			class = "ideal_planet_class"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 25
+			tile_blockers = none
+			modifiers = none
+			has_ring = no
+			anomaly = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+				
+				create_cluster = {
+					id = SHS_user1_cluster
+					radius = 80
+					center = this.solar_system
+				}
+			}
+			
+			init_effect = {
+				set_planet_flag = prescripted_ideal
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				set_capital = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					set_building = "building_capital_1"
+					add_resource = {
+						resource = food
+						amount = 10
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 10
+					}
+					add_resource = {
+						resource = influence
+						amount = 10
+					}
+					
+					random_neighboring_tile = {	
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_hydroponics_farm_1"
+						add_resource = {
+							resource = food
+							amount = 5
+							replace = yes
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "betharian_power_plant_1"
+						add_resource = {
+							resource = energy
+							amount = 5
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "betharian_power_plant_1"
+						add_resource = {
+							resource = energy
+							amount = 5
+							replace = yes
+						}
+						add_resource = {
+							resource = sr_betharian
+							amount = 1
+						}
+					}
+				
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_mining_network_1"
+						add_resource = {
+							resource = minerals
+							amount = 5
+							replace = yes
+						}						
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = physics_research
+						amount = 10
+						replace = yes
+					}
+					add_resource = {
+						resource = society_research
+						amount = 10
+					}
+					add_resource = {
+						resource = engineering_research
+						amount = 10
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = engineering_research
+						amount = 5
+						replace = yes
+					}		
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}				
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = physics_research
+						amount = 5
+						replace = yes
+					}					
+				}
+					
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_decrepit_dwellings"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_alien_pets
+						amount = 1
+					}
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_decrepit_dwellings"
+					add_resource = {
+						resource = society_research
+						amount = 5
+						replace = yes
+					}
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			class = "pc_barren"
+			orbit_distance = 5
+			orbit_angle = { min = 15 max = 345 }
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			entity = "cold_barren_planet_luna_entity"
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_orillium_deposit
+					add_deposit = d_energy10_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			class = "pc_barren"
+			orbit_distance = 5
+			orbit_angle = { min = 15 max = 345 }
+			size = { min = 10 max = 13 }
+			has_ring = no
+			anomaly = none
+			entity = "barren_planet_mars_entity"
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals10_deposit
+					add_deposit = d1_zro_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+		
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 50
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		has_ring = yes
+		anomaly = none
+		entity = "gas_giant_05_entity"
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d2_society5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_toxic"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = { min = 5 max = 8 }
+			has_ring = no
+			anomaly = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d2_society5_deposit
+					add_deposit = d2_engineering5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = 2
+			class = "pc_barren"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 5
+			size = { min = 5 max = 8 }
+			has_ring = no
+			anomaly = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d2_engineering5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			class = "pc_barren_cold"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 5
+			size = { min = 6 max = 12 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+					add_deposit = d2_physics5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 50
+		size = 20
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d2_engineering5_deposit
+				add_deposit = d2_society5_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_frozen"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = 7
+			anomaly = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+					add_deposit = d1_terraforming_liquids_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = { min = 1 max = 3 }
+			class = "rl_moons2"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 5
+			size = { min = 7 max = 10 }
+			anomaly = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		count = { min = 2 max = 3 }
+		class = "pc_frozen"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 25
+		size = { min = 16 max = 25 }
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		moon = { 
+			class = "pc_frozen"
+			orbit_distance = 15
+			orbit_angle = { min = 15 max = 345 }
+			size = { min = 5 max = 10 }
+			anomaly = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+					add_deposit = d2_engineering5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = { 
+			count = { min = 0 max = 2 }
+			class = "rl_moons2"
+			orbit_distance = 5
+			orbit_angle = { min = 15 max = 345 }
+			size = { min = 5 max = 10 }
+			anomaly = none
+		
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 20 }
+		initializer = "yggdrasil_system"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 20 }
+		initializer = "ragnarok_system_1"
+	}
+}
+
+###########################################################################################################################################################
+##### Single Star Starting System #########################################################################################################################
+###########################################################################################################################################################
+
+singlestar_system_initializer = {
+	name = "Dantooine"
+	class = "sc_k_1"
+	asteroids_distance = 115
+	usage_odds = 0
+	max_instances = 1
+	
+	usage = custom_empire
+
+	planet = {
+		name = "Dantooine"
+		class = "pc_k_star"
+		orbit_distance = 0
+		size = 50
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d_energy10_deposit
+				add_deposit = d_minerals10_deposit
+				add_deposit = d_minerals10_deposit
+				add_deposit = d2_physics10_deposit
+				add_deposit = d2_physics10_deposit
+				add_deposit = d1_engos_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_angle = { min = 0 max = 270 }
+		orbit_distance = 50
+		size = 20
+		has_ring = no
+		anomaly = none
+		entity = "gas_giant_jupiter_entity"
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_minerals10_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_molten"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+					add_deposit = d1_garanthium_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = "rl_hot_moons"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_angle = { min = 45 max = 270 }
+		orbit_distance = 40
+		size = 20
+		has_ring = no
+		anomaly = none
+		entity = "gas_giant_05_entity"
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d1_terraforming_gases_deposit
+			}
+		}
+		
+		moon = {
+			class = "rl_hot_moons"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals10_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = "rl_hot_moons"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			class = "pc_toxic"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d2_pitharan_deposit
+					add_deposit = d1_engineering5_deposit
+					add_deposit = d1_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	change_orbit = 25
+	
+	planet = {
+		class = "pc_asteroid"
+		orbit_angle = { min = 0 max = 40 }
+		orbit_distance = 0
+		size = 10
+		has_ring = no
+		anomaly = none
+		entity = "barren_planet_01_destroyed_entity"
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals10_deposit
+				add_deposit = d2_physics10_deposit
+				add_deposit = d1_teldar_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_asteroid"
+		count = 4
+		orbit_angle = { min = 30 max = 72 }
+		orbit_distance = 0
+		size = { min = 2 max = 5 }
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		home_planet = yes
+		starting_planet = yes
+		class = "ideal_planet_class"
+		orbit_angle = { min = 30 max = 270 }
+		orbit_distance = 40
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		has_ring = yes
+		anomaly = none
+			
+			
+		init_effect = {
+			prevent_anomaly = yes
+			create_cluster = {
+				id = SHS_user1_cluster
+				radius = 80
+				center = this.solar_system
+			}
+		}
+		
+		init_effect = {
+			set_planet_flag = prescripted_ideal
+		}
+			
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_resource = {
+					resource = food
+					amount = 10
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 10
+				}
+				add_resource = {
+					resource = influence
+					amount = 10
+				}
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 5
+						replace = yes
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "betharian_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "betharian_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 5
+						replace = yes
+					}
+					add_resource = {
+						resource = sr_betharian
+						amount = 1
+					}
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_resource = {
+						resource = minerals
+						amount = 5
+						replace = yes
+					}						
+				}
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = physics_research
+					amount = 10
+					replace = yes
+				}
+				add_resource = {
+					resource = society_research
+					amount = 10
+				}
+				add_resource = {
+					resource = engineering_research
+					amount = 10
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = engineering_research
+					amount = 5
+					replace = yes
+				}		
+			}
+		
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}				
+			}
+		
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = physics_research
+					amount = 5
+					replace = yes
+				}					
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+				add_resource = {
+					resource = sr_alien_pets
+					amount = 1
+				}
+			}
+		
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = society_research
+					amount = 5
+					replace = yes
+				}
+			}
+		}
+		
+		moon = {
+			class = "pc_barren_cold"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = 12
+			has_ring = no
+			anomaly = none
+			entity = "cold_barren_planet_luna_entity"
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_terraforming_liquids_deposit
+					add_deposit = d_minerals10_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			class = "pc_barren"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d2_engineering5_deposit
+					add_deposit = d2_society5_deposit
+					add_deposit = d2_neutronium_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		orbit_angle = { min = 30 max = 270 }
+		orbit_distance = 20
+		size = 20
+		has_ring = no
+		anomaly = none
+		entity = "barren_planet_mars_entity"
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d1_orillium_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_frozen"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_zro_deposit
+					add_deposit = d_energy5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = "pc_frozen"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "rl_moons1"
+		orbit_angle = { min = 30 max = 270 }
+		orbit_distance = 25
+		size = 20
+		has_ring = yes
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_engineering10_deposit
+				add_deposit = d2_society10_deposit
+			}
+		}
+		
+		moon = {
+			class = "rl_moons2"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_engineering5_deposit
+					add_deposit = d1_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = { min = 1 max = 3 }
+			class = "rl_moons2"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_engineering5_deposit
+					add_deposit = d1_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_angle = { min = 30 max = 270 }
+		orbit_distance = 25
+		size = 27
+		has_ring = no
+		anomaly = none
+		entity = "gas_giant_03_entity"
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_engineering5_deposit
+				add_deposit = d2_society5_deposit
+				add_deposit = d2_physics5_deposit
+			}
+		}
+		
+		moon = {
+			class = "rl_moons1"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 15
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d2_engineering5_deposit
+					add_deposit = d2_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = { min = 1 max = 3 }
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d1_engineering5_deposit
+					add_deposit = d1_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		class = "pc_frozen"
+		orbit_angle = { min = 30 max = 270 }
+		orbit_distance = 25
+		size = 20
+		has_ring = no
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d1_physics5_deposit
+			}
+		}
+		
+		moon = {
+			class = "rl_moons1"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = 10
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d1_engineering5_deposit
+					add_deposit = d1_society5_deposit
+				}
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		moon = {
+			count = { min = 0 max = 3 }
+			class = "rl_moons1"
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+			size = { min = 7 max = 10 }
+			has_ring = no
+			anomaly = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_energy5_deposit
+					add_deposit = d1_engineering5_deposit
+					add_deposit = d1_society5_deposit
+				}
+			}
+
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 20 }
+		initializer = "yggdrasil_system"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 20 }
+		initializer = "ragnarok_system_1"
+	}
+}
