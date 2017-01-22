@@ -342,142 +342,145 @@ dualstar_system_initializer = {
 					clear_deposits = yes
 				}
 				
+				every_tile = {
+					clear_deposits = yes
+					clear_resources = yes
+				}
+				
 				random_tile = {
-					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
 					set_building = "building_capital_1"
-					add_resource = {
-						resource = food
-						amount = 10
-						replace = yes
-					}	
-					add_resource = {
-						resource = minerals
-						amount = 10
-					}
-					add_resource = {
-						resource = influence
-						amount = 10
-					}
+					clear_deposits = yes
+					add_deposit = d3_empire_capital_tile_deposit
 					
 					random_neighboring_tile = {	
-						limit = { has_blocker = no has_building = no }
+						limit = { has_blocker = no has_building = no has_deposit = no }
 						set_building = "building_hydroponics_farm_1"
-						add_resource = {
-							resource = food
-							amount = 5
-							replace = yes
-						}
+						clear_deposits = yes
+						add_deposit = d3_food5_deposit
 					}
 				
 					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
+						limit = { has_blocker = no has_building = no has_deposit = no }
 						set_building = "betharian_power_plant_1"
-						add_resource = {
-							resource = energy
-							amount = 5
-							replace = yes
-						}
-						add_resource = {
-							resource = sr_betharian
-							amount = 1
-						}
+						clear_deposits = yes
+						add_deposit = d3_capital_energy_deposit
 					}
 				
 					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
+						limit = { has_blocker = no has_building = no has_deposit = no }
 						set_building = "betharian_power_plant_1"
-						add_resource = {
-							resource = energy
-							amount = 5
-							replace = yes
-						}
-						add_resource = {
-							resource = sr_betharian
-							amount = 1
-						}
+						clear_deposits = yes
+						add_deposit = d3_capital_energy_deposit
 					}
 				
 					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
+						limit = { has_blocker = no has_building = no has_deposit = no }
 						set_building = "building_mining_network_1"
-						add_resource = {
-							resource = minerals
-							amount = 5
-							replace = yes
-						}						
+						clear_deposits = yes
+						add_deposit = d3_minerals5_deposit
 					}
 				}
 				
 				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = physics_research
-						amount = 10
-						replace = yes
-					}
-					add_resource = {
-						resource = society_research
-						amount = 10
-					}
-					add_resource = {
-						resource = engineering_research
-						amount = 10
-					}
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_capital_science_deposit
 				}
 				
 				random_tile = {
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = engineering_research
-						amount = 5
-						replace = yes
-					}		
+					clear_deposits = yes
+					add_deposit = d3_engineering5_deposit
 				}
 			
 				random_tile = {
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = society_research
-						amount = 5
-						replace = yes
-					}				
+					clear_deposits = yes
+					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_decrepit_dwellings"
+					clear_deposits = yes
+					add_deposit = d3_society5_deposit
 				}
 			
 				random_tile = {
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = physics_research
-						amount = 5
-						replace = yes
-					}					
+					clear_deposits = yes
+					add_deposit = d3_physics5_deposit
 				}
 					
 				random_tile = {
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_decrepit_dwellings"
-					add_resource = {
-						resource = society_research
-						amount = 5
-						replace = yes
-					}
-					add_resource = {
-						resource = sr_alien_pets
-						amount = 1
-					}
+					clear_deposits = yes
+					add_deposit = d3_alienpets_deposit
 				}
-			
+				
 				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_decrepit_dwellings"
-					add_resource = {
-						resource = society_research
-						amount = 5
-						replace = yes
-					}
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_betharian_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_food3_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals3_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy3_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy1_deposit
 				}
 			}
 			
@@ -544,7 +547,7 @@ dualstar_system_initializer = {
 			prevent_anomaly = yes
 		}
 	}
-		
+	
 	planet = {
 		class = "pc_gas_giant"
 		orbit_distance = 50
@@ -807,12 +810,12 @@ dualstar_system_initializer = {
 	}
 	
 	neighbor_system = {
-		distance = { min = 10 max = 20 }
+		distance = { min = 11 max = 50 }
 		initializer = "yggdrasil_system"
 	}
 	
 	neighbor_system = {
-		distance = { min = 10 max = 20 }
+		distance = { min = 11 max = 50 }
 		initializer = "ragnarok_system_1"
 	}
 }
@@ -1107,17 +1110,17 @@ singlestar_system_initializer = {
 		home_planet = yes
 		starting_planet = yes
 		class = "ideal_planet_class"
-		orbit_angle = { min = 30 max = 270 }
-		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 5
 		size = 25
 		tile_blockers = none
 		modifiers = none
-		has_ring = yes
+		has_ring = no
 		anomaly = none
-			
-			
+	
 		init_effect = {
 			prevent_anomaly = yes
+			
 			create_cluster = {
 				id = SHS_user1_cluster
 				radius = 80
@@ -1128,152 +1131,160 @@ singlestar_system_initializer = {
 		init_effect = {
 			set_planet_flag = prescripted_ideal
 		}
-			
+	
 		init_effect = {
 			prevent_anomaly = yes
+			set_capital = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 			}
 			
+			every_tile = {
+				clear_deposits = yes
+				clear_resources = yes
+			}
+			
 			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
 				set_building = "building_capital_1"
-				add_resource = {
-					resource = food
-					amount = 10
-					replace = yes
-				}	
-				add_resource = {
-					resource = minerals
-					amount = 10
-				}
-				add_resource = {
-					resource = influence
-					amount = 10
-				}
+				clear_deposits = yes
+				add_deposit = d3_empire_capital_tile_deposit
 				
 				random_neighboring_tile = {	
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "building_hydroponics_farm_1"
-					add_resource = {
-						resource = food
-						amount = 5
-						replace = yes
-					}
+					clear_deposits = yes
+					add_deposit = d3_food5_deposit
 				}
 			
 				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "betharian_power_plant_1"
-					add_resource = {
-						resource = energy
-						amount = 5
-						replace = yes
-					}
-					add_resource = {
-						resource = sr_betharian
-						amount = 1
-					}
+					clear_deposits = yes
+					add_deposit = d3_capital_energy_deposit
 				}
 			
 				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "betharian_power_plant_1"
-					add_resource = {
-						resource = energy
-						amount = 5
-						replace = yes
-					}
-					add_resource = {
-						resource = sr_betharian
-						amount = 1
-					}
+					clear_deposits = yes
+					add_deposit = d3_capital_energy_deposit
 				}
 			
 				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "building_mining_network_1"
-					add_resource = {
-						resource = minerals
-						amount = 5
-						replace = yes
-					}						
-				}
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = physics_research
-					amount = 10
-					replace = yes
-				}
-				add_resource = {
-					resource = society_research
-					amount = 10
-				}
-				add_resource = {
-					resource = engineering_research
-					amount = 10
+					clear_deposits = yes
+					add_deposit = d3_minerals5_deposit
 				}
 			}
 			
 			random_tile = {
-				limit = { has_blocker = no has_building = no }
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_capital_science_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = engineering_research
-					amount = 5
-					replace = yes
-				}		
+				clear_deposits = yes
+				add_deposit = d3_engineering5_deposit
 			}
 		
 			random_tile = {
-				limit = { has_blocker = no has_building = no }
+				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = society_research
-					amount = 5
-					replace = yes
-				}				
+				clear_deposits = yes
+				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_decrepit_dwellings"
+				clear_deposits = yes
+				add_deposit = d3_society5_deposit
 			}
 		
 			random_tile = {
-				limit = { has_blocker = no has_building = no }
+				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = physics_research
-					amount = 5
-					replace = yes
-				}					
+				clear_deposits = yes
+				add_deposit = d3_physics5_deposit
 			}
 				
 			random_tile = {
-				limit = { has_blocker = no has_building = no }
+				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_decrepit_dwellings"
-				add_resource = {
-					resource = society_research
-					amount = 5
-					replace = yes
-				}
-				add_resource = {
-					resource = sr_alien_pets
-					amount = 1
-				}
+				clear_deposits = yes
+				add_deposit = d3_alienpets_deposit
 			}
-		
+			
 			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				add_resource = {
-					resource = society_research
-					amount = 5
-					replace = yes
-				}
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_betharian_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_food3_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_minerals3_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_energy3_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_minerals2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_energy2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_minerals1_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_minerals1_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_energy1_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_energy1_deposit
 			}
 		}
-		
+	
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	
 		moon = {
 			class = "pc_barren_cold"
 			orbit_angle = { min = 15 max = 345 }
@@ -1660,12 +1671,12 @@ singlestar_system_initializer = {
 	}
 	
 	neighbor_system = {
-		distance = { min = 10 max = 20 }
+		distance = { min = 11 max = 50 }
 		initializer = "yggdrasil_system"
 	}
 	
 	neighbor_system = {
-		distance = { min = 10 max = 20 }
+		distance = { min = 11 max = 50 }
 		initializer = "ragnarok_system_1"
 	}
 }
