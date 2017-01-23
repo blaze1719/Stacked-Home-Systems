@@ -11,11 +11,8 @@
 ###########################################################################################################################################################
 
 dualstar_system_initializer = {
-	name = "Tatooine"
 	class = "sc_g_1"
 	asteroids_distance = 121
-	usage_odds = 0
-	max_instances = 1
 	
 	usage = custom_empire
 	
@@ -28,10 +25,6 @@ dualstar_system_initializer = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_energy10_deposit
@@ -39,10 +32,6 @@ dualstar_system_initializer = {
 				add_deposit = d2_physics5_deposit
 				add_deposit = d1_engos_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 		
@@ -56,10 +45,6 @@ dualstar_system_initializer = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_energy10_deposit
@@ -67,10 +52,6 @@ dualstar_system_initializer = {
 				add_deposit = d2_physics5_deposit
 				add_deposit = d1_engos_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -83,10 +64,6 @@ dualstar_system_initializer = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d1_garanthium_deposit
@@ -104,23 +81,11 @@ dualstar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -133,10 +98,6 @@ dualstar_system_initializer = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d1_garanthium_deposit
@@ -154,23 +115,11 @@ dualstar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -181,10 +130,6 @@ dualstar_system_initializer = {
 		size = 16
 		has_ring = yes
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -199,14 +144,10 @@ dualstar_system_initializer = {
 		moon = {
 			class = "pc_toxic"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 5
+			orbit_distance = 8
 			has_ring = no
 			anomaly = none
 			size = { min = 5 max = 8 }
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -217,14 +158,6 @@ dualstar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -241,20 +174,12 @@ dualstar_system_initializer = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_energy5_deposit
 				add_deposit = d_minerals5_deposit
 				add_deposit = d2_physics5_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 
@@ -266,10 +191,6 @@ dualstar_system_initializer = {
 		has_ring = yes
 		entity = "gas_giant_jupiter_entity"
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -291,20 +212,12 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d2_neutronium_deposit
 					add_deposit = d1_physics5_deposit
 					add_deposit = d1_engineering5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -323,21 +236,6 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-				
-				create_cluster = {
-					id = SHS_user1_cluster
-					radius = 80
-					center = this.solar_system
-				}
-			}
-			
-			init_effect = {
-				set_planet_flag = prescripted_ideal
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
-				set_capital = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 				}
@@ -348,7 +246,7 @@ dualstar_system_initializer = {
 				}
 				
 				random_tile = {
-					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 					set_building = "building_capital_1"
 					clear_deposits = yes
 					add_deposit = d3_empire_capital_tile_deposit
@@ -470,22 +368,6 @@ dualstar_system_initializer = {
 					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_energy1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_energy1_deposit
-				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -500,19 +382,11 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d1_orillium_deposit
 					add_deposit = d_energy10_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -527,24 +401,12 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals10_deposit
 					add_deposit = d1_zro_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -556,10 +418,6 @@ dualstar_system_initializer = {
 		has_ring = yes
 		anomaly = none
 		entity = "gas_giant_05_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -581,20 +439,12 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
 					add_deposit = d2_society5_deposit
 					add_deposit = d2_engineering5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -609,19 +459,11 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
 					add_deposit = d2_engineering5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 
@@ -635,24 +477,12 @@ dualstar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 					add_deposit = d2_physics5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -662,10 +492,6 @@ dualstar_system_initializer = {
 		orbit_distance = 50
 		size = 20
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -686,19 +512,11 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 					add_deposit = d1_terraforming_liquids_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -712,23 +530,11 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 
@@ -740,10 +546,6 @@ dualstar_system_initializer = {
 		size = { min = 16 max = 25 }
 		has_ring = yes
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -763,19 +565,11 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 					add_deposit = d2_engineering5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -789,33 +583,21 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-			}
-		
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "yggdrasil_system"
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "ragnarok_system_1"
 	}
 }
@@ -828,8 +610,6 @@ singlestar_system_initializer = {
 	name = "Dantooine"
 	class = "sc_k_1"
 	asteroids_distance = 115
-	usage_odds = 0
-	max_instances = 1
 	
 	usage = custom_empire
 
@@ -840,10 +620,6 @@ singlestar_system_initializer = {
 		size = 50
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -858,10 +634,6 @@ singlestar_system_initializer = {
 				add_deposit = d1_engos_deposit
 			}
 		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	
 	planet = {
@@ -872,10 +644,6 @@ singlestar_system_initializer = {
 		has_ring = no
 		anomaly = none
 		entity = "gas_giant_jupiter_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -895,19 +663,11 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 					add_deposit = d1_garanthium_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -922,23 +682,11 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -950,11 +698,7 @@ singlestar_system_initializer = {
 		has_ring = no
 		anomaly = none
 		entity = "gas_giant_05_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
+
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
@@ -974,18 +718,10 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals10_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1000,18 +736,10 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1022,11 +750,7 @@ singlestar_system_initializer = {
 			size = { min = 7 max = 10 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-			
+
 			init_effect = {
 				prevent_anomaly = yes
 				orbital_deposit_tile = {
@@ -1036,14 +760,6 @@ singlestar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 
@@ -1060,10 +776,6 @@ singlestar_system_initializer = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_energy5_deposit
@@ -1071,10 +783,6 @@ singlestar_system_initializer = {
 				add_deposit = d2_physics10_deposit
 				add_deposit = d1_teldar_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1089,20 +797,12 @@ singlestar_system_initializer = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_energy5_deposit
 				add_deposit = d_minerals5_deposit
 				add_deposit = d2_physics5_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1120,21 +820,6 @@ singlestar_system_initializer = {
 	
 		init_effect = {
 			prevent_anomaly = yes
-			
-			create_cluster = {
-				id = SHS_user1_cluster
-				radius = 80
-				center = this.solar_system
-			}
-		}
-		
-		init_effect = {
-			set_planet_flag = prescripted_ideal
-		}
-	
-		init_effect = {
-			prevent_anomaly = yes
-			set_capital = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 			}
@@ -1145,144 +830,109 @@ singlestar_system_initializer = {
 			}
 			
 			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_capital_1"
-				clear_deposits = yes
 				add_deposit = d3_empire_capital_tile_deposit
 				
 				random_neighboring_tile = {	
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "building_hydroponics_farm_1"
-					clear_deposits = yes
 					add_deposit = d3_food5_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "betharian_power_plant_1"
-					clear_deposits = yes
 					add_deposit = d3_capital_energy_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "betharian_power_plant_1"
-					clear_deposits = yes
 					add_deposit = d3_capital_energy_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "building_mining_network_1"
-					clear_deposits = yes
 					add_deposit = d3_minerals5_deposit
 				}
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_capital_science_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_failing_infrastructure"
-				clear_deposits = yes
 				add_deposit = d3_engineering5_deposit
 			}
 		
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_failing_infrastructure"
-				clear_deposits = yes
 				add_deposit = d3_society5_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_decrepit_dwellings"
-				clear_deposits = yes
 				add_deposit = d3_society5_deposit
 			}
 		
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_failing_infrastructure"
-				clear_deposits = yes
 				add_deposit = d3_physics5_deposit
 			}
 				
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_decrepit_dwellings"
-				clear_deposits = yes
 				add_deposit = d3_alienpets_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_betharian_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_food3_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals3_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy3_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals1_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals1_deposit
 			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_energy1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_energy1_deposit
-			}
-		}
-	
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	
 		moon = {
@@ -1292,11 +942,8 @@ singlestar_system_initializer = {
 			size = 12
 			has_ring = no
 			anomaly = none
+			modifiers = none
 			entity = "cold_barren_planet_luna_entity"
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1305,10 +952,6 @@ singlestar_system_initializer = {
 					add_deposit = d1_terraforming_liquids_deposit
 					add_deposit = d_minerals10_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1319,10 +962,7 @@ singlestar_system_initializer = {
 			size = { min = 7 max = 10 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1333,14 +973,6 @@ singlestar_system_initializer = {
 					add_deposit = d2_neutronium_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1352,10 +984,6 @@ singlestar_system_initializer = {
 		has_ring = no
 		anomaly = none
 		entity = "barren_planet_mars_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1376,19 +1004,11 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d1_zro_deposit
 					add_deposit = d_energy5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1403,23 +1023,11 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1431,10 +1039,6 @@ singlestar_system_initializer = {
 		size = 20
 		has_ring = yes
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1457,19 +1061,11 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d1_engineering5_deposit
 					add_deposit = d1_society5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1484,24 +1080,12 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d1_engineering5_deposit
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1513,10 +1097,6 @@ singlestar_system_initializer = {
 		has_ring = no
 		anomaly = none
 		entity = "gas_giant_03_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1540,19 +1120,11 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d2_engineering5_deposit
 					add_deposit = d2_society5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1566,10 +1138,6 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
@@ -1577,14 +1145,6 @@ singlestar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 
@@ -1595,10 +1155,6 @@ singlestar_system_initializer = {
 		size = 20
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1620,20 +1176,12 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
 					add_deposit = d1_engineering5_deposit
 					add_deposit = d1_society5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1648,10 +1196,6 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
@@ -1659,24 +1203,16 @@ singlestar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "yggdrasil_system"
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "ragnarok_system_1"
 	}
 }

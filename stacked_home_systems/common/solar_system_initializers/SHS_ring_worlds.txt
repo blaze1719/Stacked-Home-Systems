@@ -1,0 +1,679 @@
+
+
+##############################################################################################################################
+## Ring World System #########################################################################################################
+##############################################################################################################################
+
+ring_world_system_1 = {
+	asteroids_distance = 150
+	name = "The Gift"
+
+	class = "sc_g_1"
+	
+	planet = {
+		name = "The Gift"
+		class = "pc_g_star"
+		orbit_distance = 0
+		size = 30
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy10_deposit
+			}
+		}
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab A"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+			
+			every_tile = {
+				clear_deposits = yes
+				clear_resources = yes
+				
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+				add_deposit = d3_ring_colony_tile_deposit
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_food5_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_minerals5_deposit
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_deposit = d3_engineering5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_engineering5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_society5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_physics5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				clear_deposits = yes
+				add_deposit = d3_alienpets_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_food5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_capital_energy_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_betharian_deposit
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+		}
+	}
+	
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech B"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam C"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab D"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+			
+			every_tile = {
+				clear_deposits = yes
+				clear_resources = yes
+				
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+				add_deposit = d3_ring_colony_tile_deposit
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_food5_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_minerals5_deposit
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_deposit = d3_engineering5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_engineering5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_society5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_physics5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_alienpets_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_food5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_capital_energy_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_betharian_deposit
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech E"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam F"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab G"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+			
+			every_tile = {
+				clear_deposits = yes
+				clear_resources = yes
+				
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+				add_deposit = d3_ring_colony_tile_deposit
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_food5_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_minerals5_deposit
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_deposit = d3_engineering5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_engineering5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_society5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_physics5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_alienpets_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_food5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_capital_energy_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_betharian_deposit
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech H"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam I"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Ring Hab J"
+		size = 25
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		anomaly = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+			
+			every_tile = {
+				clear_deposits = yes
+				clear_resources = yes
+				
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+				add_deposit = d3_ring_colony_tile_deposit
+				
+				random_neighboring_tile = {	
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_food5_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_capital_energy_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					add_deposit = d3_minerals5_deposit
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_old_atmosphere_generator"
+				add_deposit = d3_engineering5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_engineering5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_society5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_physics5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_crashed_satellites"
+				add_deposit = d3_alienpets_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_food5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_capital_energy_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+				
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_betharian_deposit
+			}
+				
+			random_tile	= {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_rich_asteroid_crater"
+				add_deposit = d3_minerals5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Tech K"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d2_living_metal_deposit
+				add_deposit = d1_engineering5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Seam L"
+		orbit_angle = 30
+		orbit_distance = 0
+		anomaly = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_physics5_deposit
+				add_deposit = d1_society5_deposit
+			}
+		}
+	}
+	
+	change_orbit = 105
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = random_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 1 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			orbit_angle = { min = 15 max = 345 }
+			orbit_distance = @base_moon_distance
+		}
+	}
+}
