@@ -1,0 +1,82 @@
+
+########################################
+## Stacked Home Systems Tile Blockers ##
+########################################
+
+tb_overgrown_wildlife = {
+	picture = tb_dangerous_wildlife
+	time = 10
+	cost = {
+		minerals = 10
+		energy = 10 
+	}
+	
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_recent_crater = {
+	picture = tb_crater
+	time = 15
+	cost = {
+		minerals = 15
+		energy = 15
+	}
+	
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_crashed_satellites = {
+	picture = tb_city_ruins
+	time = 20
+	cost = {
+		minerals = 20
+		energy = 20
+	}
+	
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_old_atmosphere_generator = {
+	picture = tb_city_ruins
+	time = 20
+	cost = {
+		minerals = 20
+		energy = 20
+	}
+	
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_rich_asteroid_crater = {
+	picture = tb_crater
+	time = 20
+	cost = {
+		minerals = -200
+		energy = 200
+	}
+	
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+	adjacency_bonus = {
+		resource_minerals_add = 3
+	}
+}

@@ -1,0 +1,33 @@
+
+Change moon distances
+check all planetary and lunar distances for consistency
+add resources up
+
+
+In Tatooine system:
+
+	Distance between Objects:
+		from 0: Suns at 30
+				First planet 40 (70)
+				second planet 20 (90)
+				third planet 20 (110)
+				asteroids 20 (130)
+				Fourth planet 50 (180)
+				Fifth planet 60 (240)
+				Sixth planet 50 (290)
+				
+	
+	Energy: 10 + 10 + 5 + 5 + 5 + 5 + 10 + 10 + 10 + 5
+	Minerals: 10 + 10 + 10 + ( 5 + (5) ) + 10 + ( 5 + (5) ) + 5 + 5 + 5 + 5 + 10 
+	Physics: 5 + 5 + 5 + 5 + 5 + 5
+	Society: 5 + 5 + 5 + 5 + 5 + 5 
+	Engineering: 5 + 5 + 5 + 5
+	
+	Special Resources:
+		garanthium X2
+		pitharan X2
+		terraforming gases 
+		living metal
+		orillium
+		zro
+		
