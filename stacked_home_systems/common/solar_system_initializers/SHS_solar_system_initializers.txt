@@ -1,13 +1,13 @@
 
 @distance = 20
-@base_moon_distance = 5
-
-###########################
-### NEIGHBORING SYSTEMS ###
-###########################
+@base_moon_distance = 10
 
 ############################################################################################################################
-# Different Planet Class systems ###########################################################################################
+## NEIGHBORING SYSTEMS #####################################################################################################
+############################################################################################################################
+
+############################################################################################################################
+## Different Planet Class systems ##########################################################################################
 ############################################################################################################################
 
 yggdrasil_system = {
@@ -22,12 +22,7 @@ yggdrasil_system = {
 		size = 50
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		
+
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
@@ -36,10 +31,6 @@ yggdrasil_system = {
 				add_deposit = d2_physics5_deposit
 				add_deposit = d2_engineering5_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -51,11 +42,7 @@ yggdrasil_system = {
 		size = 30
 		has_ring = no
 		anomaly = none
-					
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
+
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
@@ -65,10 +52,6 @@ yggdrasil_system = {
 				add_deposit = d2_physics5_deposit
 				add_deposit = d2_engineering5_deposit
 			}	
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -82,10 +65,7 @@ yggdrasil_system = {
 		orbit_angle = { min = 35 max = 90 }
 		orbit_distance = 0
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -95,10 +75,6 @@ yggdrasil_system = {
 				add_deposit = d2_physics2_deposit
 				add_deposit = d2_engineering2_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -110,10 +86,7 @@ yggdrasil_system = {
 		size = 30
 		has_ring = yes
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -122,10 +95,6 @@ yggdrasil_system = {
 				add_deposit = d_energy5_deposit
 				add_deposit = d1_lythuric_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 		
 		moon = {
@@ -151,30 +120,25 @@ yggdrasil_system = {
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -182,75 +146,64 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -294,30 +247,25 @@ yggdrasil_system = {
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -325,70 +273,63 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -411,35 +352,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -447,70 +382,63 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -533,35 +461,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -569,75 +491,64 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -677,35 +588,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -713,70 +618,63 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -799,35 +697,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -835,70 +727,63 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -921,35 +806,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -957,75 +836,64 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1037,6 +905,7 @@ yggdrasil_system = {
 		size = 30
 		has_ring = yes
 		anomaly = none
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1065,35 +934,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -1101,70 +964,63 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1187,35 +1043,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -1223,70 +1073,63 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1309,35 +1152,29 @@ yggdrasil_system = {
 				every_tile = {
 					clear_deposits = yes
 					clear_resources = yes
-					
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_betharian_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_food3_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
 						add_deposit = d3_minerals3_deposit
 					}
 				}
@@ -1345,70 +1182,63 @@ yggdrasil_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 	}
@@ -1421,6 +1251,7 @@ yggdrasil_system = {
 		size = 30
 		has_ring = yes
 		anomaly = none
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1438,6 +1269,7 @@ yggdrasil_system = {
 			size = 16
 			has_ring = no
 			anomaly = none
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1450,14 +1282,6 @@ yggdrasil_system = {
 					add_deposit = d2_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1469,6 +1293,7 @@ yggdrasil_system = {
 		size = 30
 		has_ring = yes
 		anomaly = none
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1483,8 +1308,9 @@ yggdrasil_system = {
 			class = "pc_frozen"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 20
-			size = 16
+			size = { min = 10 max = 15 }
 			anomaly = none
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1495,10 +1321,6 @@ yggdrasil_system = {
 					add_deposit = d2_engineering5_deposit
 				}	
 			}
-
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
@@ -1508,6 +1330,7 @@ yggdrasil_system = {
 			orbit_angle = { min = 15 max = 345 }
 			size = { min = 5 max = 10 }
 			anomaly = none
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1517,10 +1340,6 @@ yggdrasil_system = {
 					add_deposit = d2_physics5_deposit
 					add_deposit = d2_society5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1539,36 +1358,23 @@ yggdrasil_system = {
 					add_deposit = d2_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
-		initializer = "ring_world_system_1"
-	}
-	
-	neighbor_system = {
-		distance = { min = 11 max = 50 }	
+		distance = { min = 10 max = 50 }	
 		initializer = "neighbor_normal_1_colony"
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "mjolnir_system"
 	}
 }
 
-################################################################################################################################################################
-# Ragnarök system ##############################################################################################################################################
-################################################################################################################################################################
+############################################################################################################################
+## Ragnarök system #########################################################################################################
+############################################################################################################################
 
 ragnarok_system_1 = {
 	class = "sc_black_hole_1"
@@ -1582,6 +1388,7 @@ ragnarok_system_1 = {
 		size = { min = 20 max = 30 }
 		has_ring = no
 		anomaly = none
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1601,6 +1408,8 @@ ragnarok_system_1 = {
 			orbit_angle = { min = 90 max = 270 }
 			size = 20
 			anomaly = none
+			modifiers = none
+			
 			init_effect = {
 				prevent_anomaly = yes
 				orbital_deposit_tile = {
@@ -1610,14 +1419,6 @@ ragnarok_system_1 = {
 					add_deposit = d1_satramene_deposit
 				}	
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1629,6 +1430,8 @@ ragnarok_system_1 = {
 		orbit_distance = 55
 		size = 20
 		anomaly = none
+		modifiers = none
+		
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
@@ -1637,10 +1440,6 @@ ragnarok_system_1 = {
 				add_deposit = d1_living_metal_deposit
 				add_deposit = d_minerals10_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1652,6 +1451,8 @@ ragnarok_system_1 = {
 		orbit_angle = { min = 20 max = 72 }
 		orbit_distance = 0
 		anomaly = none
+		modifiers = none
+		
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
@@ -1660,10 +1461,6 @@ ragnarok_system_1 = {
 				add_deposit = d_minerals3_deposit
 				add_deposit = d_energy3_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1676,6 +1473,7 @@ ragnarok_system_1 = {
 		modifiers = none
 		entity = "barren_planet_01_destroyed_entity"
 		anomaly = none
+		
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
@@ -1685,10 +1483,6 @@ ragnarok_system_1 = {
 				add_deposit = d_minerals10_deposit
 				add_deposit = d2_engineering5_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1736,101 +1530,94 @@ ragnarok_system_1 = {
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
-						add_deposit = d3_energy3_deposit
+						add_deposit = d3_capital_energy_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
-						add_deposit = d3_energy3_deposit
+						add_deposit = d3_capital_energy_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
-						add_deposit = d3_food3_deposit
+						add_deposit = d3_food5_deposit
 					}	
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						clear_deposits = yes
-						add_deposit = d3_minerals3_deposit
+						add_deposit = d3_minerals5_deposit
 					}
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
 				}
 			
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_overgrown_wildlife"
-					clear_deposits = yes
 					add_deposit = d3_physics5_deposit
+					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_society2_deposit
 				}
 
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_recent_crater"
-					clear_deposits = yes
 					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_society2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals1_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
+					add_deposit = d3_betharian_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_energy2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1841,6 +1628,7 @@ ragnarok_system_1 = {
 			orbit_distance = 5
 			class = "pc_barren"
 			anomaly = none
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1853,14 +1641,6 @@ ragnarok_system_1 = {
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1872,10 +1652,7 @@ ragnarok_system_1 = {
 		size = 15
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1892,10 +1669,7 @@ ragnarok_system_1 = {
 			count = { min = 1 max = 2 }
 			orbit_distance = 7
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1907,26 +1681,13 @@ ragnarok_system_1 = {
 					add_deposit = d2_physics2_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	neighbor_system = {
-		distance = { min = 11 max = 50 }	
-		initializer = "neighbor_normal_3_colony"
 	}
 }
 
-#######################################################################################################################################################
-# Neighbor Star Normal Colony 1 #######################################################################################################################
-#######################################################################################################################################################
+############################################################################################################################
+## Neighbor Star Normal Colony 1 ###########################################################################################
+############################################################################################################################
 
 neighbor_normal_1_colony = {
 	class = "sc_f_1"
@@ -1939,6 +1700,7 @@ neighbor_normal_1_colony = {
 		size = { min = 20 max = 30 }
 		has_ring = no
 		anomaly = none
+		modifiers = none
 		
 		init_effect = {	
 			prevent_anomaly = yes
@@ -1946,10 +1708,6 @@ neighbor_normal_1_colony = {
 				clear_deposits = yes
 				add_deposit = d_energy3_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1961,17 +1719,25 @@ neighbor_normal_1_colony = {
 		orbit_angle = { min = 35 max = 90 }
 		size = { min = 3 max = 5 }
 		orbit_distance = 0
+		anomaly = none
+		modifiers = none
 	}
 	
 	planet = {
 		count = { min = 1 max = 2 }
-		orbit_distance = 20
-		
-		change_orbit = @base_moon_distance
+		orbit_angle = { min = 90 max = 270 }
+		class = "rl_un1"
+		orbit_distance = 25
+		anomaly = none
+		modifiers = none
 		
 		moon = {
 			count = { min = 0 max = 1 }
-			orbit_distance = 5
+			orbit_angle = { min = 0 max = 359 }
+			class = "rl_un1"
+			orbit_distance = 10
+			anomaly = none
+			modifiers = none
 		}
 	}
 	
@@ -1982,7 +1748,7 @@ neighbor_normal_1_colony = {
 		tile_blockers = none
 		modifiers = none
 		orbit_angle = { min = 90 max = 270 }
-		size = { min = 18 max = 25 }
+		size = { min = 20 max = 25 }
 		anomaly = none
 			
 		init_effect = {
@@ -2000,30 +1766,25 @@ neighbor_normal_1_colony = {
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_colony_capital_tile_deposit
 					
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_betharian_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_betharian_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food3_deposit
 				}	
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals3_deposit
 				}
 			}
@@ -2031,100 +1792,96 @@ neighbor_normal_1_colony = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
 				add_deposit = d3_alienpets_deposit
 			}
 		
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
 				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_society5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_engineering2_deposit
 			}
 
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
 				add_deposit = d3_physics5_deposit
+				add_deposit = d3_engineering2_deposit
+				add_deposit = d3_society2_deposit
 			}
 
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
 				add_deposit = d3_engineering5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_society2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_food2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals1_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy1_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 			
 		moon = { 
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 7
+			orbit_distance = 10
 			class = "rl_un1"
+			anomaly = none
+			modifiers = none
 		}
 	}
 	
 	planet = {
 		count = { min = 2 max = 5 }
 		orbit_distance = 25
-		
-		change_orbit = @base_moon_distance
+		orbit_angle = { min = 30 max = 330 }
+		class = "rl_un1"
 		
 		moon = {			
 			count = { min = 0 max = 1 }
-			orbit_distance = 5
+			orbit_distance = 10
+			class = "rl_un1"
 		}
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }	
+		distance = { min = 10 max = 50 }
 		initializer = "neighbor_normal_2_colony"
 	}
 }
 
-##################################################################################################################################
-# Neighbor Star Normal Colony 2 ##################################################################################################
-##################################################################################################################################
+############################################################################################################################
+## Neighbor Star Normal Colony 2 ###########################################################################################
+############################################################################################################################
 
 neighbor_normal_2_colony = {
 	class = "rl_standard_stars"
@@ -2136,18 +1893,29 @@ neighbor_normal_2_colony = {
 		orbit_distance = 0
 		size = { min = 20 max = 30 }
 		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy3_deposit
+			}
+		}
 	}
 	
 	planet = {
 		count = 1
 		orbit_distance = 45
+		orbit_angle = { min = 0 max = 359 }
+		size = { min = 20 max = 30 }
+		class = "rl_hot_moons"
 	}
 	
 	change_orbit = 25
 	
 	planet = {
 		count = { min = 1 max = 3 }
-		class = random_asteroid
+		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = { min = 15 max = 110 }
 	}
@@ -2159,7 +1927,7 @@ neighbor_normal_2_colony = {
 		orbit_distance = 25
 		tile_blockers = none
 		modifiers = none
-		size = { min = 19 max = 25 }
+		size = { min = 20 max = 25 }
 		anomaly = none
 		has_ring = no
 		
@@ -2178,30 +1946,25 @@ neighbor_normal_2_colony = {
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_colony_capital_tile_deposit
 					
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_betharian_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_betharian_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food3_deposit
 				}	
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals3_deposit
 				}
 			}
@@ -2209,1102 +1972,98 @@ neighbor_normal_2_colony = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
 				add_deposit = d3_alienpets_deposit
 			}
 		
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
 				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_society5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_engineering2_deposit
 			}
 
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
 				add_deposit = d3_physics5_deposit
+				add_deposit = d3_society2_deposit
+				add_deposit = d3_engineering2_deposit
 			}
 
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
 				add_deposit = d3_engineering5_deposit
+				add_deposit = d3_society2_deposit
+				add_deposit = d3_physics2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_food2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals1_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy1_deposit
 			}
 		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 			
+			
+		change_orbit = 5
+		
 		moon = {
-			count = { min = 0 max = 2 }
+			count = { min = 1 max = 3 }
 			orbit_angle = { min = 15 max = 345 }
 			orbit_distance = 5
 			class = "rl_all_1"
-			size = 16
+			size = { min = 10 max = 20 }
 			anomaly = none
 			modifiers = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		count = { min = 2 max = 5 }
-		orbit_distance = 25
+		orbit_distance = 30
+		orbit_angle = { min = 60 max = 300 }
+		class = "rl_all_1"
 		
-		change_orbit = @base_moon_distance
+		change_orbit = 5
 		
 		moon = {		
 			count = { min = 0 max = 1 }
 			orbit_distance = 5
+			class = "rl_all_1"
 		}
 	}
 }
 
-###################################################################################################################################
-# Neighbor Star Third Colony ######################################################################################################
-###################################################################################################################################
-
-neighbor_normal_3_colony = {
-	class = "rl_custom_standard_stars"
-
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 0
-		size = { min = 20 max = 30 }
-		has_ring = no
-	}
-	
-	change_orbit = 25
-	
-	planet = {
-		count = 2
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = 20
-	}
-	
-	planet = {
-		count = 1
-		orbit_distance = 25
-		class = ideal_planet_class
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 18 max = 25 }
-		anomaly = none
-			
-		init_effect = {
-			set_planet_flag = prescripted_ideal
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-			}
-			
-			every_tile = {
-				clear_deposits = yes
-				clear_resources = yes
-				
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_colony_capital_tile_deposit
-					
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_betharian_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_betharian_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food3_deposit
-				}	
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_minerals3_deposit
-				}
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_alienpets_deposit
-			}
-		
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_physics5_deposit
-			}
-
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_food2_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_minerals2_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_minerals1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_energy2_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_energy1_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		moon = { 
-			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 7
-			class = "rl_un1"
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-
-	planet = {
-		count = 2
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = 20
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-	
-	planet = {
-		count = { min = 0 max = 2 }
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = 20
-	}
-}
-
-##############################################################################################################################
-## Ring World System #########################################################################################################
-##############################################################################################################################
-
-ring_world_system_1 = {
-	asteroids_distance = 150
-	name = "The Gift"
-
-	class = "sc_g_1"
-	
-	planet = {
-		name = "The Gift"
-		class = "pc_g_star"
-		orbit_distance = 0
-		size = 30
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d_energy10_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	change_orbit = 45
-	
-	planet = {
-		class = "pc_ringworld_habitable"
-		name = "Ring Hab A"
-		size = 25
-		orbit_angle = 30
-		orbit_distance = 0
-		tile_blockers = none
-		modifiers = none
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-			}
-			
-			every_tile = {
-				clear_deposits = yes
-				clear_resources = yes
-				
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_ring_colony_tile_deposit
-				
-				random_neighboring_tile = {	
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food5_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_minerals5_deposit
-				}
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_old_atmosphere_generator"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_physics5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_alienpets_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_food5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_capital_energy_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_betharian_deposit
-			}
-				
-			random_tile	= {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_rich_asteroid_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Tech B"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d1_engineering5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Seam C"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d1_physics5_deposit
-				add_deposit = d1_society5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_habitable"
-		name = "Ring Hab D"
-		size = 25
-		orbit_angle = 30
-		orbit_distance = 0
-		tile_blockers = none
-		modifiers = none
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-			}
-			
-			every_tile = {
-				clear_deposits = yes
-				clear_resources = yes
-				
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_ring_colony_tile_deposit
-				
-				random_neighboring_tile = {	
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food5_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_minerals5_deposit
-				}
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_old_atmosphere_generator"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_physics5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_alienpets_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_food5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_capital_energy_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_betharian_deposit
-			}
-				
-			random_tile	= {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_rich_asteroid_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Tech E"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d1_engineering5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Seam F"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d1_physics5_deposit
-				add_deposit = d1_society5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_habitable"
-		name = "Ring Hab G"
-		size = 25
-		orbit_angle = 30
-		orbit_distance = 0
-		tile_blockers = none
-		modifiers = none
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-			}
-			
-			every_tile = {
-				clear_deposits = yes
-				clear_resources = yes
-				
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_ring_colony_tile_deposit
-				
-				random_neighboring_tile = {	
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food5_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_minerals5_deposit
-				}
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_old_atmosphere_generator"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_physics5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_alienpets_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_food5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_capital_energy_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_betharian_deposit
-			}
-				
-			random_tile	= {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_rich_asteroid_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Tech H"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d1_engineering5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Seam I"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d1_physics5_deposit
-				add_deposit = d1_society5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_habitable"
-		name = "Ring Hab J"
-		size = 25
-		orbit_angle = 30
-		orbit_distance = 0
-		tile_blockers = none
-		modifiers = none
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-			}
-			
-			every_tile = {
-				clear_deposits = yes
-				clear_resources = yes
-				
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_ring_colony_tile_deposit
-				
-				random_neighboring_tile = {	
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food5_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_capital_energy_deposit
-				}
-			
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_minerals5_deposit
-				}
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_old_atmosphere_generator"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_physics5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_crashed_satellites"
-				clear_deposits = yes
-				add_deposit = d3_alienpets_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_food5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_capital_energy_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_betharian_deposit
-			}
-				
-			random_tile	= {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_rich_asteroid_crater"
-				clear_deposits = yes
-				add_deposit = d3_minerals5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Tech K"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d2_living_metal_deposit
-				add_deposit = d1_engineering5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Seam L"
-		orbit_angle = 30
-		orbit_distance = 0
-		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d1_physics5_deposit
-				add_deposit = d1_society5_deposit
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-	}
-	
-	change_orbit = 105
-	
-	planet = {
-		count = { min = 1 max = 4 }
-		class = random_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 90 max = 270 }
-	}
-	
-	change_orbit = 45
-	
-	planet = {
-		class = pc_gas_giant
-		orbit_angle = { min = 90 max = 270 }
-		size = 25
-		
-		change_orbit = @base_moon_distance
-		
-		moon = {
-			count = { min = 1 max = 4 }
-			size = { min = 8 max = 20 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 6
-		}
-	}
-	
-	change_orbit = 30
-	
-	planet = {
-		count = { min = 0 max = 2 }
-		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-		
-		moon = {
-			count = { min = 0 max = 2 }
-			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
-		}
-	}
-}
-
-#######################################################################################################################################
-## Mjölnir System #####################################################################################################################
-#######################################################################################################################################
+############################################################################################################################
+## Mjölnir System ##########################################################################################################
+############################################################################################################################
 
 mjolnir_system = {
 	asteroids_distance = 200
@@ -3318,6 +2077,7 @@ mjolnir_system = {
 		orbit_distance = 0
 		size = 30
 		anomaly = none
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -3347,10 +2107,6 @@ mjolnir_system = {
 				add_deposit = d_minerals3_deposit
 			}
 		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	
 	planet = {
@@ -3368,10 +2124,6 @@ mjolnir_system = {
 				clear_deposits = yes
 				add_deposit = d_minerals3_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -3411,10 +2163,6 @@ mjolnir_system = {
 					add_deposit = d2_engineering3_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
@@ -3434,14 +2182,6 @@ mjolnir_system = {
 					add_deposit = d2_physics3_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -3465,35 +2205,29 @@ mjolnir_system = {
 			every_tile = {
 				clear_deposits = yes
 				clear_resources = yes
-				
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_colony_capital_tile_deposit
 					
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_betharian_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_betharian_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_food3_deposit
 				}	
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_minerals3_deposit
 				}
 			}
@@ -3501,62 +2235,61 @@ mjolnir_system = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
 				add_deposit = d3_alienpets_deposit
 			}
 		
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
 				add_deposit = d3_society5_deposit
-			}
-				random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_overgrown_wildlife"
-				clear_deposits = yes
-				add_deposit = d3_physics5_deposit
-			}
-				random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_recent_crater"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_society5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_engineering2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				add_deposit = d3_physics5_deposit
+				add_deposit = d3_engineering2_deposit
+				add_deposit = d3_society2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				add_deposit = d3_engineering5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_society2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
 				add_deposit = d3_food2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals1_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy1_deposit
 			}
 		}	
@@ -3565,7 +2298,7 @@ mjolnir_system = {
 			name = "Thrud"
 			class = "pc_barren"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 15
+			orbit_distance = 10
 			size = { min = 8 max = 11 }
 			anomaly = none
 			modifiers = none
@@ -3578,14 +2311,6 @@ mjolnir_system = {
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -3605,10 +2330,6 @@ mjolnir_system = {
 				add_deposit = d_energy3_deposit
 				add_deposit = d2_society3_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -3648,14 +2369,6 @@ mjolnir_system = {
 					add_deposit = d2_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -3672,20 +2385,12 @@ mjolnir_system = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 				add_deposit = d_energy5_deposit
 				add_deposit = d_minerals5_deposit
 				add_deposit = d2_physics5_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -3726,34 +2431,729 @@ mjolnir_system = {
 					add_deposit = d2_engineering3_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 }
 
+############################################################################################################################
+## Tomb World System #######################################################################################################
+############################################################################################################################
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+tomb_world_system = {
+	class = "sc_f_1"
+	asteroids_distance = 100
+	
+	planet = {
+		class = "pc_f_star"
+		orbit_angle = 0
+		orbit_distance = 0
+		size = 30
+		anomaly = none
+		modifiers = none
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d2_society5_deposit
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_molten"
+		orbit_angle = { min = 30 max = 330 }
+		orbit_distance = 45
+		size = { min = 15 max = 25 }
+		anomaly = none
+		modifiers = none
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_minerals5_deposit
+			}
+		}
+		
+		change_orbit = 5
+		
+		moon = {
+			count = { min = 1 max = 2 }
+			class = "pc_molten"
+			orbit_angle = { min = 0 max = 359 }
+			orbit_distance = 5
+			size = { min = 5 max = 10 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals3_deposit
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_toxic"
+		orbit_angle = { min = 30 max = 330 }
+		orbit_distance = 30
+		size = { min = 15 max = 20 }
+		anomaly = none
+		modifiers = none
+		has_ring = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy3_deposit
+				add_deposit = d2_society3_deposit
+			}
+		}
+		
+		moon = {
+			class = "pc_toxic"
+			orbit_angle = { min = 0 max = 359 }
+			orbit_distance = 10
+			size = { min = 5 max = 10 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_society2_deposit
+				}
+			}
+		}
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = "pc_asteroid"
+		orbit_angle = { min = 15 max = 50 }
+		orbit_distance = 0
+		size = 3
+		anomaly = none
+		modifiers = none
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy2_deposit
+				add_deposit = d_minerals2_deposit
+			}
+		}
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		class = "pc_nuked"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 0
+		size = 25
+		anomaly = none
+		modifiers = none
+		has_ring = yes
+		tile_blockers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+			}
+			
+			every_tile = {
+				clear_deposits = yes
+				clear_resources = yes
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_colony_capital_tile_deposit
+					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_betharian_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_betharian_deposit
+				}
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_food3_deposit
+				}	
+			
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals3_deposit
+				}
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				clear_deposits = yes
+				add_deposit = d3_alienpets_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				clear_deposits = yes
+				add_deposit = d3_society5_deposit
+			}
+		
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				clear_deposits = yes
+				add_deposit = d3_society5_deposit
+				add_deposit = d3_engineering2_deposit
+				add_deposit = d3_physics2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_overgrown_wildlife"
+				clear_deposits = yes
+				add_deposit = d3_physics5_deposit
+				add_deposit = d3_society2_deposit
+				add_deposit = d3_engineering2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_recent_crater"
+				clear_deposits = yes
+				add_deposit = d3_engineering5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_society2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_food2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_minerals2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_minerals1_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_energy2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				clear_deposits = yes
+				add_deposit = d3_energy1_deposit
+			}
+		}
+		
+		change_orbit = 10
+		
+		moon = {
+			class = ideal_planet_class
+			orbit_angle = { min = 60 max = 300 }
+			orbit_distance = 5
+			size = { min = 20 max = 25 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			tile_blockers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+				
+				every_tile = {
+					clear_deposits = yes
+					clear_resources = yes
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_colony_capital_tile_deposit
+						
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						clear_deposits = yes
+						add_deposit = d3_betharian_deposit
+					}
+			
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						clear_deposits = yes
+						add_deposit = d3_betharian_deposit
+					}
+			
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						clear_deposits = yes
+						add_deposit = d3_food3_deposit
+					}	
+			
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						clear_deposits = yes
+						add_deposit = d3_minerals3_deposit
+					}
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_recent_crater"
+					clear_deposits = yes
+					add_deposit = d3_alienpets_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					clear_deposits = yes
+					add_deposit = d3_society5_deposit
+				}
+		
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					clear_deposits = yes
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
+				}	
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_overgrown_wildlife"
+					clear_deposits = yes
+					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_recent_crater"
+					clear_deposits = yes
+					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_society2_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_food2_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals1_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy2_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy1_deposit
+				}
+			}	
+		}
+		
+		moon = {
+			class = "pc_barren"
+			orbit_angle = { min = 30 max = 330 }
+			orbit_distance = 5
+			size = { min = 10 max = 12 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals2_deposit
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 40
+		size = { min = 25 max = 30 }
+		anomaly = none
+		modifiers = none
+		has_ring = yes
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d1_terraforming_gases_deposit
+				add_deposit = d_energy5_deposit
+			}
+		}
+		
+		change_orbit = 5
+		
+		moon = {
+			class = "rl_habitable_1"
+			orbit_angle = { min = 0 max = 359 }
+			orbit_distance = 10
+			size = { min = 18 max = 25 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			tile_blockers = none
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+				}
+				
+				random_list = {
+					15 = {
+						create_species = {
+							name = random
+							class = "PRE_MAM"
+							portrait = random
+							traits = {
+								trait = trait_presentient_irradiated
+								trait = trait_resilient
+							}
+							homeworld = THIS
+							sentient = no
+						}
+					}
+				
+					15 = {
+						create_species = {
+							name = random
+							class = "PRE_REP"
+							portrait = random
+							traits = {
+								trait = trait_presentient_irradiated
+								trait = trait_resilient
+							}
+							homeworld = THIS
+							sentient = no
+						}
+					}
+				
+					15 = {
+						create_species = {
+							name = random
+							class = "PRE_AVI"
+							portrait = random
+							traits = {
+								trait = trait_presentient_irradiated
+								trait = trait_resilient
+							}	
+							homeworld = THIS
+							sentient = no
+						}
+					}
+				
+					15 = {
+						create_species = {
+							name = random
+							class = "PRE_ART"
+							portrait = random
+							traits = {
+								trait = trait_presentient_irradiated
+								trait = trait_resilient
+							}
+							homeworld = THIS
+							sentient = no
+						}
+					}
+				
+					15 = {
+						create_species = {
+							name = random
+							class = "PRE_MOL"
+							portrait = random
+							traits = {
+								trait = trait_presentient_irradiated
+								trait = trait_resilient
+							}
+							homeworld = THIS
+							sentient = no
+						}
+					}
+				
+					15 = {
+						create_species = {
+							name = random
+							class = "PRE_FUN"
+							portrait = random
+							traits = {
+								trait = trait_presentient_irradiated
+								trait = trait_resilient
+							}
+							homeworld = THIS
+							sentient = no
+						}
+					}
+				}
+			
+				while = {
+					limit = {
+						count_pops = {
+							limit = { is_sentient = no }
+							count < 5
+						}
+						free_pop_tiles > 0
+					}
+				
+					best_tile_for_pop = {
+						create_pop = { species = last_created }
+					}
+				}
+				
+				every_tile = {
+					clear_deposits = yes
+					clear_resources = yes
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no has_pop = no }
+					clear_deposits = yes
+					set_blocker = "tb_mountain_range"
+					add_deposit = d3_energy1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no has_pop = no }
+					clear_deposits = yes
+					set_blocker = "tb_dangerous_wildlife"
+					add_deposit = d3_minerals1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_food1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_food2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no has_pop = no }
+					clear_deposits = yes
+					set_blocker = "tb_overgrown_wildlife"
+					add_deposit = d3_alienpets_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_physics2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_society2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_engineering2_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no has_pop = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals3_deposit
+					add_deposit = d3_food3_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no has_pop = no }
+					clear_deposits = yes
+					set_blocker = "tb_dense_jungle"
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no has_pop = no }
+					clear_deposits = yes
+					set_blocker = "tb_massive_glacier"
+				}
+			}
+		}
+		
+		
+		
+		moon = {
+			count = { min = 1 max = 2 }
+			class = "rl_moons2"
+			orbit_angle = { min = 30 max = 330 }
+			orbit_distance = 5
+			size = { min = 10 max = 15 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d1_society3_deposit
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 40
+		size = { min = 20 max = 25 }
+		anomaly = none
+		modifiers = none
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy2_deposit
+			}
+		}
+		
+		change_orbit = 10
+		
+		moon = {
+			class = "rl_moons2"
+			orbit_angle = { min = 0 max = 359 }
+			orbit_distance = 5
+			size = { min = 8 max = 12 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals3_deposit
+				}
+			}
+		}
+	}
+	
+	planet = {
+		count = { min = 0 max = 3 }
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 20
+		size = { min = 15 max = 20 }
+		class = "rl_moons2"
+		anomaly = none
+		modifiers = none
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_minerals1_deposit
+				add_deposit = d_energy1_deposit
+			}
+		}
+		
+		change_orbit = 5
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			class = "pc_frozen"
+			orbit_angle = { min = 0 max = 359 }
+			orbit_distance = 5
+			size = { min = 8 max = 12 }
+			anomaly = none
+			modifiers = none
+			has_ring = no
+			
+			init_effect = {
+				prevent_anomaly = yes
+				orbital_deposit_tile = {
+					clear_deposits = yes
+					add_deposit = d_minerals1_deposit
+					add_deposit = d2_physics1_deposit
+				}
+			}
+		}
+	}
+}

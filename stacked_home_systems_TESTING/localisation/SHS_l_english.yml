@@ -130,9 +130,9 @@
     d2_physics9_deposit:0 "Physics Research +9\n   £physics_research  +9\n"
     d2_physics10_deposit:0 "Physics Research +10\n   £physics_research  +10\n"
     
-    d3_empire_capital_tile_deposit:0 "£food  +10\n   £minerals  +10\n   £influence  +10\n"
-    d3_colony_capital_tile_deposit:0 "£food  +5\n   £minerals  +5\n"
-    d3_ring_colony_tile_deposit:0 "£food  +10\n   £minerals  +10\n"
+    d3_empire_capital_tile_deposit:0 "£energy  +10\n   £influence  +10\n   £unity  +5\n"
+    d3_colony_capital_tile_deposit:0 "£energy  +5\n   £unity  +1\n"
+    d3_ring_colony_tile_deposit:0 "£energy  +10\n   £unity  +1\n"
     d3_colony_influence_deposit:0 "£influence  +1\n"
     d3_capital_food_deposit:0 "£food  +5\n"
     d3_capital_minerals_deposit:0 "£minerals  +5\n"

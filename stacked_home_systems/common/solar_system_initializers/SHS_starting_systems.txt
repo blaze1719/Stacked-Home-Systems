@@ -1,34 +1,28 @@
 
-@distance = 20
 @base_moon_distance = 5
 
-###########################################################################################################################################################
-##### Starting Systems ####################################################################################################################################
-###########################################################################################################################################################
+############################################################################################################################
+## Starting Systems ########################################################################################################
+############################################################################################################################
 
-###########################################################################################################################################################
-##### Dual Star Starting System ###########################################################################################################################
-###########################################################################################################################################################
+############################################################################################################################
+## Dual Star Starting System ###############################################################################################
+############################################################################################################################
 
 dualstar_system_initializer = {
-	name = "Tatooine"
 	class = "sc_g_1"
-	asteroids_distance = 121
-	usage_odds = 0
-	max_instances = 1
+	asteroids_distance = 130
 	
 	usage = custom_empire
 	
-	planet = {
+	planet = { # Star number 1 #
+		name = "Tatooine A"
 		class = "pc_g_star"
 		orbit_distance = 30
 		size = 30
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -37,26 +31,20 @@ dualstar_system_initializer = {
 				add_deposit = d_energy10_deposit
 				add_deposit = d_minerals10_deposit
 				add_deposit = d2_physics5_deposit
-				add_deposit = d1_engos_deposit
+				add_deposit = d1_engos_deposit				
 			}
 		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
-		
+	
 	planet = {
+		name = "Tatooine B"
 		orbit_angle = 180
 		orbit_distance = 0
 		size = 30
 		class = "pc_g_star"
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -68,22 +56,15 @@ dualstar_system_initializer = {
 				add_deposit = d1_engos_deposit
 			}
 		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	
 	planet = {
 		class = "pc_molten"
 		orbit_distance = 40
-		orbit_angle = { min = 90 max = 270 }
-		size = 15
+		orbit_angle = { min = 0 max = 359 }
+		size = 20
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -94,17 +75,16 @@ dualstar_system_initializer = {
 			}
 		}
 		
+		change_orbit = 5
+		
 		moon = {
-			count = { min = 1 max = 2 }
+			count = { min = 0 max = 2 }
 			orbit_distance = 5
-			orbit_angle = { min = 15 max = 345 }
+			orbit_angle = { min = 0 max = 359 }
 			class = "pc_molten"
-			size = { min = 5 max = 8 }
+			size = { min = 8 max = 12 }
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -113,27 +93,16 @@ dualstar_system_initializer = {
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		class = "pc_molten"
-		orbit_distance = 18
-		orbit_angle = { min = 90 max = 270 }
-		size = 15
+		orbit_distance = 20
+		orbit_angle = { min = 30 max = 330 }
+		size = 20
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -144,17 +113,16 @@ dualstar_system_initializer = {
 			}
 		}
 		
+		change_orbit = 5
+
 		moon = {
-			count = { min = 1 max = 2 }
+			count = { min = 0 max = 2 }
 			orbit_distance = 5
-			orbit_angle = { min = 15 max = 345 }
+			orbit_angle = { min = 0 max = 359 }
 			class = "pc_molten"
-			size = { min = 5 max = 8 }
+			size = { min = 8 max = 12 }
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -163,28 +131,17 @@ dualstar_system_initializer = {
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		class = "pc_toxic"
-		orbit_distance = 18
-		orbit_angle = { min = 90 max = 270 }
-		size = 16
+		orbit_distance = 20
+		orbit_angle = { min = 30 max = 330 }
+		size = 20
 		has_ring = yes
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -199,14 +156,11 @@ dualstar_system_initializer = {
 		moon = {
 			class = "pc_toxic"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 5
+			orbit_distance = 10
 			has_ring = no
 			anomaly = none
-			size = { min = 5 max = 8 }
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			size = { min = 8 max = 12 }
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -217,31 +171,20 @@ dualstar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
-	change_orbit = 15
+	change_orbit = 20
 	
 	planet = {
-		count = 4
+		count = 2
 		class = "pc_asteroid"
 		orbit_distance = 0
-		orbit_angle = 90
-		size = 4
+		orbit_angle = { min = 5 max = 90 }
+		size = { min = 3 max = 5 }
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -252,24 +195,38 @@ dualstar_system_initializer = {
 				add_deposit = d2_physics5_deposit
 			}
 		}
+	}
+	
+	planet = {
+		count = 2
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 5 max = 90 }
+		size = { min = 3 max = 5 }
+		has_ring = no
+		anomaly = none
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_society5_deposit
+			}
 		}
 	}
 
 	planet = {
 		class = "pc_gas_giant"
-		orbit_distance = 40
-		orbit_angle = { min = 45 max = 315 }
-		size = 25
+		orbit_distance = 50
+		orbit_angle = { min = 30 max = 330 }
+		size = 30
 		has_ring = yes
 		entity = "gas_giant_jupiter_entity"
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -280,31 +237,26 @@ dualstar_system_initializer = {
 			}
 		}
 		
+		change_orbit = 15
+		
 		moon = {
 			class = "pc_barren"
-			orbit_distance = 15
-			orbit_angle = { min = 15 max = 345 }
-			size = { min = 7 max = 10 }
+			orbit_distance = 5
+			orbit_angle = { min = 0 max = 359 }
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
 			entity = "barren_planet_01_destroyed_entity"
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 		
 			init_effect = {
 				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
-					add_deposit = d2_neutronium_deposit
+					add_deposit = d2_living_metal_deposit
 					add_deposit = d1_physics5_deposit
 					add_deposit = d1_engineering5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -312,8 +264,8 @@ dualstar_system_initializer = {
 
 			home_planet = yes
 			starting_planet = yes
-			class = "ideal_planet_class"
-			orbit_angle = { min = 90 max = 270 }
+			class = ideal_planet_class
+			orbit_angle = { min = 30 max = 330 }
 			orbit_distance = 5
 			size = 25
 			tile_blockers = none
@@ -323,14 +275,6 @@ dualstar_system_initializer = {
 		
 			init_effect = {
 				prevent_anomaly = yes
-				create_cluster = {
-					id = SHS_user1_cluster
-					radius = 80
-					center = this.solar_system
-				}
-	
-				set_planet_flag = prescripted_ideal
-				set_capital = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 				}
@@ -341,7 +285,7 @@ dualstar_system_initializer = {
 				}
 				
 				random_tile = {
-					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 					set_building = "building_capital_1"
 					clear_deposits = yes
 					add_deposit = d3_empire_capital_tile_deposit
@@ -383,34 +327,6 @@ dualstar_system_initializer = {
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					set_blocker = "tb_failing_infrastructure"
-					clear_deposits = yes
-					add_deposit = d3_engineering5_deposit
-				}
-			
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					set_blocker = "tb_failing_infrastructure"
-					clear_deposits = yes
-					add_deposit = d3_society5_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					set_blocker = "tb_decrepit_dwellings"
-					clear_deposits = yes
-					add_deposit = d3_society5_deposit
-				}
-			
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					set_blocker = "tb_failing_infrastructure"
-					clear_deposits = yes
-					add_deposit = d3_physics5_deposit
-				}
-					
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_blocker = "tb_decrepit_dwellings"
 					clear_deposits = yes
 					add_deposit = d3_alienpets_deposit
@@ -420,6 +336,40 @@ dualstar_system_initializer = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					clear_deposits = yes
 					add_deposit = d3_betharian_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_decrepit_dwellings"
+					clear_deposits = yes
+					add_deposit = d3_society5_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_failing_infrastructure"
+					clear_deposits = yes
+					add_deposit = d3_engineering5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_physics2_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_failing_infrastructure"
+					clear_deposits = yes
+					add_deposit = d3_society5_deposit
+					add_deposit = d3_physics2_deposit
+					add_deposit = d3_engineering2_deposit
+				}
+			
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_blocker = "tb_failing_infrastructure"
+					clear_deposits = yes
+					add_deposit = d3_physics5_deposit
+					add_deposit = d3_society2_deposit
+					add_deposit = d3_engineering2_deposit
 				}
 				
 				random_tile = {
@@ -437,13 +387,25 @@ dualstar_system_initializer = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					clear_deposits = yes
-					add_deposit = d3_energy3_deposit
+					add_deposit = d3_minerals2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					clear_deposits = yes
-					add_deposit = d3_minerals2_deposit
+					add_deposit = d3_minerals1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_minerals1_deposit
+				}
+				
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					clear_deposits = yes
+					add_deposit = d3_energy3_deposit
 				}
 				
 				random_tile = {
@@ -455,18 +417,6 @@ dualstar_system_initializer = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					clear_deposits = yes
-					add_deposit = d3_minerals1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_minerals1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
 				}
 				
@@ -474,22 +424,19 @@ dualstar_system_initializer = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					clear_deposits = yes
 					add_deposit = d3_energy1_deposit
-				}
+				}	
 			}
 		}
 		
 		moon = {
 			class = "pc_barren"
 			orbit_distance = 5
-			orbit_angle = { min = 15 max = 345 }
-			size = { min = 7 max = 10 }
+			orbit_angle = { min = 30 max = 330 }
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
+			modifiers = none
 			entity = "cold_barren_planet_luna_entity"
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		
 			init_effect = {
 				prevent_anomaly = yes
@@ -499,24 +446,17 @@ dualstar_system_initializer = {
 					add_deposit = d_energy10_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			class = "pc_barren"
 			orbit_distance = 5
-			orbit_angle = { min = 15 max = 345 }
+			orbit_angle = { min = 30 max = 330 }
 			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
+			modifiers = none
 			entity = "barren_planet_mars_entity"
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		
 			init_effect = {
 				prevent_anomaly = yes
@@ -526,29 +466,18 @@ dualstar_system_initializer = {
 					add_deposit = d1_zro_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		class = "pc_gas_giant"
 		orbit_distance = 50
-		orbit_angle = { min = 90 max = 270 }
-		size = 20
+		orbit_angle = { min = 60 max = 300 }
+		size = 25
 		has_ring = yes
+		modifiers = none
 		anomaly = none
 		entity = "gas_giant_05_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -560,17 +489,16 @@ dualstar_system_initializer = {
 			}
 		}
 		
+		change_orbit = 10
+		
 		moon = {
 			class = "pc_toxic"
-			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 15
-			size = { min = 5 max = 8 }
+			orbit_angle = { min = 0 max = 359 }
+			orbit_distance = 10
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 		
 			init_effect = {
 				prevent_anomaly = yes
@@ -581,24 +509,17 @@ dualstar_system_initializer = {
 					add_deposit = d2_engineering5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			count = 2
 			class = "pc_barren"
-			orbit_angle = { min = 15 max = 345 }
+			orbit_angle = { min = 30 max = 330 }
 			orbit_distance = 5
-			size = { min = 5 max = 8 }
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 		
 			init_effect = {
 				prevent_anomaly = yes
@@ -606,55 +527,20 @@ dualstar_system_initializer = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
 					add_deposit = d2_engineering5_deposit
-				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-
-		moon = {
-			class = "pc_barren_cold"
-			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 5
-			size = { min = 6 max = 12 }
-			has_ring = no
-			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-				orbital_deposit_tile = {
-					clear_deposits = yes
-					add_deposit = d_minerals5_deposit
 					add_deposit = d2_physics5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		class = "pc_gas_giant"
-		orbit_angle = { min = 90 max = 270 }
+		orbit_angle = { min = 60 max = 300 }
 		orbit_distance = 50
 		size = 20
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
+		has_ring = no
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -668,15 +554,12 @@ dualstar_system_initializer = {
 		
 		moon = {
 			class = "pc_frozen"
-			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 15
-			size = 7
+			orbit_angle = { min = 0 max = 359 }
+			orbit_distance = 10
+			size = { min = 10 max = 12 }
 			anomaly = none
+			modifiers = none
 		
-			init_effect = {
-				prevent_anomaly = yes
-			}
-			
 			init_effect = {
 				prevent_anomaly = yes
 				orbital_deposit_tile = {
@@ -685,23 +568,16 @@ dualstar_system_initializer = {
 					add_deposit = d1_terraforming_liquids_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			count = { min = 1 max = 3 }
 			class = "rl_moons2"
-			orbit_angle = { min = 15 max = 345 }
+			orbit_angle = { min = 30 max = 330 }
 			orbit_distance = 5
-			size = { min = 7 max = 10 }
+			size = { min = 10 max = 12 }
 			anomaly = none
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 		
 			init_effect = {
 				prevent_anomaly = yes
@@ -710,29 +586,18 @@ dualstar_system_initializer = {
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 
 	planet = {
 		count = { min = 2 max = 3 }
 		class = "pc_frozen"
-		orbit_angle = { min = 90 max = 270 }
+		orbit_angle = { min = 30 max = 330 }
 		orbit_distance = 25
-		size = { min = 16 max = 25 }
+		size = { min = 16 max = 20 }
 		has_ring = yes
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -740,19 +605,17 @@ dualstar_system_initializer = {
 				clear_deposits = yes
 				add_deposit = d_energy5_deposit
 				add_deposit = d2_physics5_deposit
+				add_deposit = d2_society5_deposit
 			}
 		}
 		
 		moon = { 
 			class = "pc_frozen"
-			orbit_distance = 15
+			orbit_distance = 10
 			orbit_angle = { min = 15 max = 345 }
 			size = { min = 5 max = 10 }
 			anomaly = none
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 		
 			init_effect = {
 				prevent_anomaly = yes
@@ -762,23 +625,15 @@ dualstar_system_initializer = {
 					add_deposit = d2_engineering5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = { 
-			count = { min = 0 max = 2 }
+			count = { min = 0 max = 1 }
 			class = "rl_moons2"
 			orbit_distance = 5
 			orbit_angle = { min = 15 max = 345 }
-			size = { min = 5 max = 10 }
+			size = { min = 8 max = 12 }
 			anomaly = none
-		
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		
 			init_effect = {
 				prevent_anomaly = yes
@@ -787,38 +642,38 @@ dualstar_system_initializer = {
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "yggdrasil_system"
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "ragnarok_system_1"
 	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "ring_world_system_1"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "tomb_world_system"
+	}
 }
-
-###########################################################################################################################################################
-##### Single Star Starting System #########################################################################################################################
-###########################################################################################################################################################
+	
+############################################################################################################################
+## Single Star Starting System #############################################################################################
+############################################################################################################################
 
 singlestar_system_initializer = {
 	name = "Dantooine"
 	class = "sc_k_1"
-	asteroids_distance = 115
-	usage_odds = 0
-	max_instances = 1
+	asteroids_distance = 125
 	
 	usage = custom_empire
 
@@ -829,10 +684,7 @@ singlestar_system_initializer = {
 		size = 50
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -847,10 +699,6 @@ singlestar_system_initializer = {
 				add_deposit = d1_engos_deposit
 			}
 		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	
 	planet = {
@@ -861,10 +709,7 @@ singlestar_system_initializer = {
 		has_ring = no
 		anomaly = none
 		entity = "gas_giant_jupiter_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -878,13 +723,10 @@ singlestar_system_initializer = {
 			class = "pc_molten"
 			orbit_angle = { min = 15 max = 345 }
 			orbit_distance = 10
-			size = { min = 7 max = 10 }
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -894,56 +736,39 @@ singlestar_system_initializer = {
 					add_deposit = d1_garanthium_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			count = { min = 0 max = 2 }
 			class = "rl_hot_moons"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
-			size = { min = 7 max = 10 }
+			orbit_distance = 5
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_minerals5_deposit
+					add_deposit = d1_garanthium_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		class = "pc_gas_giant"
 		orbit_angle = { min = 45 max = 270 }
-		orbit_distance = 40
+		orbit_distance = 50
 		size = 20
 		has_ring = no
 		anomaly = none
 		entity = "gas_giant_05_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
+		modifiers = none
+
 		init_effect = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
@@ -954,16 +779,13 @@ singlestar_system_initializer = {
 		}
 		
 		moon = {
-			class = "rl_hot_moons"
+			class = "pc_molten"
 			orbit_angle = { min = 15 max = 345 }
 			orbit_distance = 10
-			size = { min = 7 max = 10 }
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -972,24 +794,17 @@ singlestar_system_initializer = {
 					add_deposit = d_minerals10_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			count = { min = 0 max = 2 }
-			class = "rl_hot_moons"
+			class = "pc_molten"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
-			size = { min = 7 max = 10 }
+			orbit_distance = 5
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -998,24 +813,17 @@ singlestar_system_initializer = {
 					add_deposit = d_minerals5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			class = "pc_toxic"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
-			size = { min = 7 max = 10 }
+			orbit_distance = 5
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-			
+			modifiers = none
+
 			init_effect = {
 				prevent_anomaly = yes
 				orbital_deposit_tile = {
@@ -1025,14 +833,6 @@ singlestar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 
@@ -1042,14 +842,10 @@ singlestar_system_initializer = {
 		class = "pc_asteroid"
 		orbit_angle = { min = 0 max = 40 }
 		orbit_distance = 0
-		size = 10
+		size = 7
 		has_ring = no
 		anomaly = none
 		entity = "barren_planet_01_destroyed_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1059,26 +855,19 @@ singlestar_system_initializer = {
 				add_deposit = d_minerals10_deposit
 				add_deposit = d2_physics10_deposit
 				add_deposit = d1_teldar_deposit
+				add_deposit = d1_living_metal_deposit
 			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		class = "pc_asteroid"
-		count = 4
+		count = 2
 		orbit_angle = { min = 30 max = 72 }
 		orbit_distance = 0
 		size = { min = 2 max = 5 }
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1089,18 +878,34 @@ singlestar_system_initializer = {
 				add_deposit = d2_physics5_deposit
 			}
 		}
+	}
+	
+	planet = {
+		class = "pc_asteroid"
+		count = 2
+		orbit_angle = { min = 30 max = 72 }
+		orbit_distance = 0
+		size = { min = 2 max = 5 }
+		has_ring = no
+		anomaly = none
 		
 		init_effect = {
 			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_energy5_deposit
+				add_deposit = d_minerals5_deposit
+				add_deposit = d2_society5_deposit
+			}
 		}
 	}
 	
 	planet = {
 		home_planet = yes
 		starting_planet = yes
-		class = "ideal_planet_class"
+		class = ideal_planet_class
 		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = 5
+		orbit_distance = 30
 		size = 25
 		tile_blockers = none
 		modifiers = none
@@ -1109,21 +914,6 @@ singlestar_system_initializer = {
 	
 		init_effect = {
 			prevent_anomaly = yes
-			
-			create_cluster = {
-				id = SHS_user1_cluster
-				radius = 80
-				center = this.solar_system
-			}
-		}
-		
-		init_effect = {
-			set_planet_flag = prescripted_ideal
-		}
-	
-		init_effect = {
-			prevent_anomaly = yes
-			set_capital = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
 			}
@@ -1134,158 +924,136 @@ singlestar_system_initializer = {
 			}
 			
 			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_capital_1"
-				clear_deposits = yes
 				add_deposit = d3_empire_capital_tile_deposit
 				
 				random_neighboring_tile = {	
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "building_hydroponics_farm_1"
-					clear_deposits = yes
 					add_deposit = d3_food5_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "betharian_power_plant_1"
-					clear_deposits = yes
 					add_deposit = d3_capital_energy_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "betharian_power_plant_1"
-					clear_deposits = yes
 					add_deposit = d3_capital_energy_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					set_building = "building_mining_network_1"
-					clear_deposits = yes
 					add_deposit = d3_minerals5_deposit
 				}
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_capital_science_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_failing_infrastructure"
-				clear_deposits = yes
-				add_deposit = d3_engineering5_deposit
-			}
-		
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_failing_infrastructure"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
 				set_blocker = "tb_decrepit_dwellings"
-				clear_deposits = yes
-				add_deposit = d3_society5_deposit
-			}
-		
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_failing_infrastructure"
-				clear_deposits = yes
-				add_deposit = d3_physics5_deposit
-			}
-				
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				set_blocker = "tb_decrepit_dwellings"
-				clear_deposits = yes
 				add_deposit = d3_alienpets_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_betharian_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d3_society5_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d3_engineering5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_society2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_deposit = d3_society5_deposit
+				add_deposit = d3_physics2_deposit
+				add_deposit = d3_engineering2_deposit
+			}
+		
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_deposit = d3_physics5_deposit
+				add_deposit = d3_society2_deposit
+				add_deposit = d3_engineering2_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
 				add_deposit = d3_food3_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals3_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_energy3_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
+				add_deposit = d3_minerals1_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				add_deposit = d3_minerals1_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				add_deposit = d3_energy3_deposit
+			}
+			
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
 				add_deposit = d3_energy2_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_minerals1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
-				add_deposit = d3_minerals1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy1_deposit
 			}
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_energy1_deposit
 			}
-		}
-	
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	
 		moon = {
 			class = "pc_barren_cold"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 15
+			orbit_distance = 10
 			size = 12
 			has_ring = no
 			anomaly = none
+			modifiers = none
 			entity = "cold_barren_planet_luna_entity"
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1295,23 +1063,16 @@ singlestar_system_initializer = {
 					add_deposit = d_minerals10_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			class = "pc_barren"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
+			orbit_distance = 5
 			size = { min = 7 max = 10 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1322,29 +1083,18 @@ singlestar_system_initializer = {
 					add_deposit = d2_neutronium_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		class = "pc_barren"
 		orbit_angle = { min = 30 max = 270 }
-		orbit_distance = 20
+		orbit_distance = 25
 		size = 20
 		has_ring = no
 		anomaly = none
 		entity = "barren_planet_mars_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1359,13 +1109,10 @@ singlestar_system_initializer = {
 			class = "pc_frozen"
 			orbit_angle = { min = 15 max = 345 }
 			orbit_distance = 10
-			size = { min = 7 max = 10 }
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1375,24 +1122,17 @@ singlestar_system_initializer = {
 					add_deposit = d_energy5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			count = { min = 0 max = 2 }
 			class = "pc_frozen"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
-			size = { min = 7 max = 10 }
+			orbit_distance = 5
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1401,29 +1141,18 @@ singlestar_system_initializer = {
 					add_deposit = d_energy5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	planet = {
 		count = { min = 1 max = 2 }
-		class = "rl_moons1"
+		class = "rl_moons2"
 		orbit_angle = { min = 30 max = 270 }
 		orbit_distance = 25
 		size = 20
 		has_ring = yes
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
+		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1436,17 +1165,16 @@ singlestar_system_initializer = {
 			}
 		}
 		
+		change_orbit = 4
+		
 		moon = {
 			class = "rl_moons2"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 10
+			orbit_distance = 6
 			size = { min = 7 max = 10 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1455,10 +1183,6 @@ singlestar_system_initializer = {
 					add_deposit = d1_engineering5_deposit
 					add_deposit = d1_society5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1466,14 +1190,11 @@ singlestar_system_initializer = {
 			count = { min = 1 max = 3 }
 			class = "rl_moons2"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
+			orbit_distance = 5
 			size = { min = 7 max = 10 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
+			modifiers = none
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1483,14 +1204,6 @@ singlestar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
@@ -1498,14 +1211,10 @@ singlestar_system_initializer = {
 		class = "pc_gas_giant"
 		orbit_angle = { min = 30 max = 270 }
 		orbit_distance = 25
-		size = 27
+		size = 25
 		has_ring = no
 		anomaly = none
 		entity = "gas_giant_03_entity"
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1522,14 +1231,10 @@ singlestar_system_initializer = {
 		moon = {
 			class = "rl_moons1"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 15
-			size = { min = 7 max = 10 }
+			orbit_distance = 10
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1539,23 +1244,15 @@ singlestar_system_initializer = {
 					add_deposit = d2_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 		}
 		
 		moon = {
 			count = { min = 1 max = 3 }
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
-			size = { min = 7 max = 10 }
+			orbit_distance = 5
+			size = { min = 10 max = 13 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1566,14 +1263,6 @@ singlestar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 
@@ -1584,10 +1273,6 @@ singlestar_system_initializer = {
 		size = 20
 		has_ring = no
 		anomaly = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -1609,20 +1294,12 @@ singlestar_system_initializer = {
 			
 			init_effect = {
 				prevent_anomaly = yes
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
 					add_deposit = d_energy5_deposit
 					add_deposit = d1_engineering5_deposit
 					add_deposit = d1_society5_deposit
 				}
-			}
-			
-			init_effect = {
-				prevent_anomaly = yes
 			}
 		}
 		
@@ -1630,14 +1307,10 @@ singlestar_system_initializer = {
 			count = { min = 0 max = 3 }
 			class = "rl_moons1"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = @base_moon_distance
+			orbit_distance = 5
 			size = { min = 7 max = 10 }
 			has_ring = no
 			anomaly = none
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}
 			
 			init_effect = {
 				prevent_anomaly = yes
@@ -1648,29 +1321,26 @@ singlestar_system_initializer = {
 					add_deposit = d1_society5_deposit
 				}
 			}
-
-			init_effect = {
-				prevent_anomaly = yes
-			}
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
 		}
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "yggdrasil_system"
 	}
 	
 	neighbor_system = {
-		distance = { min = 11 max = 50 }
+		distance = { min = 10 max = 50 }
 		initializer = "ragnarok_system_1"
 	}
 	
-	#neighbor_system = {
-	#	distance = { min = 11 max = 50 }
-	#	initializer = "tomb_world_system"
-	#}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "ring_world_system_1"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "tomb_world_system"
+	}
 }

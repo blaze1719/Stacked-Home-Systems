@@ -15,6 +15,15 @@ dualstar_system_initializer = {
 	
 	usage = custom_empire
 	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
 	planet = { # Star number 1 #
 		name = "Tatooine A"
 		class = "pc_g_star"
@@ -299,14 +308,14 @@ dualstar_system_initializer = {
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						set_building = "betharian_power_plant_1"
+						set_building = "betharian_power_plant"
 						clear_deposits = yes
 						add_deposit = d3_capital_energy_deposit
 					}
 				
 					random_neighboring_tile = {
 						limit = { has_blocker = no has_building = no has_deposit = no }
-						set_building = "betharian_power_plant_1"
+						set_building = "betharian_power_plant"
 						clear_deposits = yes
 						add_deposit = d3_capital_energy_deposit
 					}
@@ -676,9 +685,18 @@ singlestar_system_initializer = {
 	asteroids_distance = 125
 	
 	usage = custom_empire
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
 
 	planet = {
-		name = "[GetHomeWorldName]"
+		name = "Dantooine"
 		class = "pc_k_star"
 		orbit_distance = 0
 		size = 50
@@ -936,13 +954,13 @@ singlestar_system_initializer = {
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					set_building = "betharian_power_plant_1"
+					set_building = "betharian_power_plant"
 					add_deposit = d3_capital_energy_deposit
 				}
 			
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					set_building = "betharian_power_plant_1"
+					set_building = "betharian_power_plant"
 					add_deposit = d3_capital_energy_deposit
 				}
 			

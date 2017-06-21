@@ -430,6 +430,26 @@ d2_satramene_deposit = {
 	is_orbital_slot = yes
 }
 
+d1_yuranic_deposit = {
+	resources = {
+		sr_yuranic = 1
+	}
+	station = shipclass_mining_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+	is_orbital_slot = yes
+}
+
+d2_yuranic_deposit = {
+	resources = {
+		sr_yuranic = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+	is_orbital_slot = yes
+}
+
 ######################################################
 ## EXTRA SCIENCE RESOURCES FOR CUSTOM SOLAR SYSTEMS ##
 ######################################################
@@ -1056,9 +1076,9 @@ d2_physics10_deposit = {
 
 d3_empire_capital_tile_deposit = {
 	resources = {
-		food = 10
-		minerals = 10
+		energy = 10
 		influence = 10
+		unity = 5
 	}
 	is_orbital_slot = no
 	drop_weight = { weight = 0 }
@@ -1066,8 +1086,8 @@ d3_empire_capital_tile_deposit = {
 
 d3_ring_colony_tile_deposit = {
 	resources = {
-		food = 10
-		minerals = 10
+		energy = 10
+		unity = 1
 	}
 	is_orbital_slot = no
 	drop_weight = { weight = 0 }
@@ -1083,8 +1103,8 @@ d3_colony_influence_deposit = {
 
 d3_colony_capital_tile_deposit = {
 	resources = {
-		food = 5
-		minerals = 5
+		energy = 5
+		unity = 1
 	}
 	is_orbital_slot = no
 	drop_weight = { weight = 0 }

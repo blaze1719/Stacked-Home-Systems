@@ -15,6 +15,15 @@ yggdrasil_system = {
 	asteroids_distance = 100
 	name = "Yggdrasil"
 	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
 	planet = {
 		name = "Odin"
 		class = "pc_b_star"
@@ -176,17 +185,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -308,17 +312,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -422,17 +421,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -536,17 +530,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -668,17 +657,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -782,17 +766,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -896,17 +875,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -1029,17 +1003,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -1143,17 +1112,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -1257,17 +1221,12 @@ yggdrasil_system = {
 					set_blocker = "tb_recent_crater"
 					add_deposit = d3_engineering5_deposit
 					add_deposit = d3_society2_deposit
-					add_deposit = d3_engineering2_deposit
+					add_deposit = d3_physics2_deposit
 				}
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_food2_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
 				}
 				
 				random_tile = {
@@ -1430,6 +1389,15 @@ ragnarok_system_1 = {
 	class = "sc_black_hole_1"
 	asteroids_distance = 70
 	name = "Ragnarok"
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
 	
 	planet = {
 		name = "Ragnarok"
@@ -1646,11 +1614,6 @@ ragnarok_system_1 = {
 				
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
-					add_deposit = d3_food1_deposit
-				}
-				
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
 					add_deposit = d3_minerals2_deposit
 				}
 				
@@ -1747,6 +1710,15 @@ ragnarok_system_1 = {
 neighbor_normal_1_colony = {
 	class = "sc_f_1"
 	asteroids_distance = 35
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
 
 	planet = {
 		count = 1
@@ -1887,11 +1859,6 @@ neighbor_normal_1_colony = {
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
 				add_deposit = d3_minerals2_deposit
 			}
 			
@@ -1946,6 +1913,15 @@ neighbor_normal_1_colony = {
 neighbor_normal_2_colony = {
 	class = "rl_standard_stars"
 	asteroids_distance = 70
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
 
 	planet = {
 		count = 1
@@ -2072,11 +2048,6 @@ neighbor_normal_2_colony = {
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
 				add_deposit = d3_minerals2_deposit
 			}
 			
@@ -2096,21 +2067,14 @@ neighbor_normal_2_colony = {
 			}
 		}
 			
-		moon = {
-			count = 1
-			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 15
-			class = "rl_all_1"
-			size = { min = 10 max = 20 }
-			anomaly = none
-			modifiers = none
-		}
+			
+		change_orbit = 5
 		
 		moon = {
-			count = { min = 0 max = 2 }
+			count = { min = 1 max = 3 }
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 10
-			class = "rl_habitable_1"
+			orbit_distance = 5
+			class = "rl_all_1"
 			size = { min = 10 max = 20 }
 			anomaly = none
 			modifiers = none
@@ -2120,14 +2084,15 @@ neighbor_normal_2_colony = {
 	planet = {
 		count = { min = 2 max = 5 }
 		orbit_distance = 30
-		orbit_angle = { min = 0 max = 359 }
+		orbit_angle = { min = 60 max = 300 }
 		class = "rl_all_1"
 		
-		change_orbit = @base_moon_distance
+		change_orbit = 5
 		
 		moon = {		
 			count = { min = 0 max = 1 }
 			orbit_distance = 5
+			class = "rl_all_1"
 		}
 	}
 }
@@ -2141,6 +2106,15 @@ mjolnir_system = {
 	name = "Mjolnir"
 	
 	class = "sc_neutron_star_1"
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
 	
 	planet = {
 		name = "Mjolnir"
@@ -2276,7 +2250,6 @@ mjolnir_system = {
 			every_tile = {
 				clear_deposits = yes
 				clear_resources = yes
-				
 			}
 			
 			random_tile = {
@@ -2347,11 +2320,6 @@ mjolnir_system = {
 			
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
 				add_deposit = d3_minerals2_deposit
 			}
 			
@@ -2375,7 +2343,7 @@ mjolnir_system = {
 			name = "Thrud"
 			class = "pc_barren"
 			orbit_angle = { min = 15 max = 345 }
-			orbit_distance = 15
+			orbit_distance = 10
 			size = { min = 8 max = 11 }
 			anomaly = none
 			modifiers = none
@@ -2520,6 +2488,15 @@ tomb_world_system = {
 	class = "sc_f_1"
 	asteroids_distance = 100
 	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
 	planet = {
 		class = "pc_f_star"
 		orbit_angle = 0
@@ -2661,7 +2638,7 @@ tomb_world_system = {
 			}
 			
 			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
 				clear_deposits = yes
 				add_deposit = d3_colony_capital_tile_deposit
 					
@@ -2740,12 +2717,6 @@ tomb_world_system = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no has_deposit = no }
 				clear_deposits = yes
-				add_deposit = d3_food1_deposit
-			}
-			
-			random_tile = {
-				limit = { has_blocker = no has_building = no has_deposit = no }
-				clear_deposits = yes
 				add_deposit = d3_minerals2_deposit
 			}
 			
@@ -2792,7 +2763,7 @@ tomb_world_system = {
 				}
 				
 				random_tile = {
-					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 has_deposit = no }
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 4 has_deposit = no }
 					clear_deposits = yes
 					add_deposit = d3_colony_capital_tile_deposit
 						
@@ -2866,12 +2837,6 @@ tomb_world_system = {
 					limit = { has_blocker = no has_building = no has_deposit = no }
 					clear_deposits = yes
 					add_deposit = d3_food2_deposit
-				}
-			
-				random_tile = {
-					limit = { has_blocker = no has_building = no has_deposit = no }
-					clear_deposits = yes
-					add_deposit = d3_food1_deposit
 				}
 			
 				random_tile = {
@@ -3126,8 +3091,8 @@ tomb_world_system = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no has_deposit = no has_pop = no }
 					clear_deposits = yes
-					add_deposit = d3_minerals2_deposit
-					add_deposit = d3_food2_deposit
+					add_deposit = d3_minerals3_deposit
+					add_deposit = d3_food3_deposit
 				}
 				
 				random_tile = {

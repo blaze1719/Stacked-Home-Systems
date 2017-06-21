@@ -9,15 +9,6 @@ ring_world_system_1 = {
 
 	class = "sc_g_1"
 	
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}
-	
 	planet = {
 		name = "The Gift"
 		class = "pc_g_star"
