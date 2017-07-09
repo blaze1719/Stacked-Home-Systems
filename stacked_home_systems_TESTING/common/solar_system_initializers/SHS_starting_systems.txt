@@ -17,9 +17,9 @@ dualstar_system_initializer = {
 	
 	init_effect = {
 		every_neighbor_system = {
-			set_star_flag = empire_cluster
+			set_star_flag = empire_cluster_1
 			every_neighbor_system = {
-				set_star_flag = empire_cluster
+				set_star_flag = empire_cluster_1
 			}
 		}
 	}
@@ -286,6 +286,12 @@ dualstar_system_initializer = {
 				prevent_anomaly = yes
 				orbital_deposit_tile = {
 					clear_deposits = yes
+				}
+				
+				create_cluster = {
+					id = empire_cluster
+					radius = 300
+					center = this.solar_system
 				}
 				
 				every_tile = {
@@ -655,8 +661,18 @@ dualstar_system_initializer = {
 	}
 	
 	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_normal_1_colony"
+	}
+	
+	neighbor_system = {
 		distance = { min = 10 max = 50 }
-		initializer = "yggdrasil_system"
+		initializer = "mjolnir_system"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "yggdrasil_system_2"
 	}
 	
 	neighbor_system = {
@@ -688,9 +704,9 @@ singlestar_system_initializer = {
 	
 	init_effect = {
 		every_neighbor_system = {
-			set_star_flag = empire_cluster
+			set_star_flag = empire_cluster_1
 			every_neighbor_system = {
-				set_star_flag = empire_cluster
+				set_star_flag = empire_cluster_1
 			}
 		}
 	}
@@ -934,6 +950,12 @@ singlestar_system_initializer = {
 			prevent_anomaly = yes
 			orbital_deposit_tile = {
 				clear_deposits = yes
+			}
+			
+			create_cluster = {
+				id = empire_cluster_1
+				radius = 300
+				center = this.solar_system
 			}
 			
 			every_tile = {
@@ -1343,8 +1365,18 @@ singlestar_system_initializer = {
 	}
 	
 	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_normal_1_colony"
+	}
+	
+	neighbor_system = {
 		distance = { min = 10 max = 50 }
-		initializer = "yggdrasil_system"
+		initializer = "mjolnir_system"
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "yggdrasil_system_2"
 	}
 	
 	neighbor_system = {

@@ -4,4 +4,4 @@ tags={
 	"Balance"
 	"Galaxy Generation"
 }
-supported_version="1.4.1"
+supported_version="1.6.2"
